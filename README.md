@@ -2,15 +2,15 @@
 <h1 align = "center"> FATEC Profº Jessen Vidal, SJC - 3º Semestre DSM </h1>
 <p align = "center">
 <img src = "https://github.com/grupo-3dsm/repo_pi/blob/master/assets/img/fatec-logo.png" width = "240px" height = "140px">
-<h1 text align="center"> Nome do Porjeto </h1>
+<h1 text align="center"> Nome do Projeto </h1>
 
 > Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Nathtruyts/readme-teste?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/NathTruyts/readme-teste?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/Nathtruyts/readme-teste?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/github/issues-raw/NathTruyts/readme-teste?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/github/issues-pr/Nathtruyts/readme-teste?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/Grupo2-DSM/api-3dsm-2022?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/Grupo2-DSM/api-3dsm-2022?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/Grupo2-DSM/api-3dsm-2022?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/github/issues-raw/Grupo2-DSM/api-3dsm-2022?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/github/issues-pr/Grupo2-DSM/api-3dsm-2022?style=for-the-badge)
 
  
  ## Sobre o projeto 
@@ -51,11 +51,12 @@ Seguindo conforme este cronograma estipulado para cada sprint:
 <img src=> 
   
 ## Equipe
-|                                                            | User                                             | Função |
-| :--------------------------------------------------------- | :----------------------------------------------- | :------- |
-| ![](https://avatars.githubusercontent.com/u/78958795?s=30) | [@annakks](https://github.com/dembygenesis)      |   S.M    |
-| ![](https://avatars.githubusercontent.com/u/79321198?s=30) | [@drisabelles](https://github.com/drisabelles)   | Dev-Team |
-| ![](https://avatars.githubusercontent.com/u/69692614?s=30) | [@vbuarque](https://github.com/vbuarque)         | Dev-Team |
-| ![](https://avatars.githubusercontent.com/u/78803504?s=30) | [@NathTruyts](https://github.com/Nathtruyts)     |   P.O    |
-| ![](https://avatars.githubusercontent.com/u/55259166?s=30) | [@gustavols](https://github.com/gustavols)       | Dev-Team |
-| ![]() | [@daniellsfilho](https://github.com/daniellsfilho)| Dev-Team |
+|                                                            | User                                                | Função |
+| :--------------------------------------------------------- | :-----------------------------------------------    | :------- |
+| ![](https://avatars.githubusercontent.com/u/78958795?s=30) | [Ana Carolina do Santos](https://github.com/annakks)|   S.M    |
+| ![](https://avatars.githubusercontent.com/u/79321198?s=30) | [Isabelle Ribeiro](https://github.com/drisabelles)  | Dev-Team |
+| ![](https://avatars.githubusercontent.com/u/69692614?s=30) | [Vinicius Buarque](https://github.com/vbuarque)     | Dev-Team |
+| ![](https://avatars.githubusercontent.com/u/78803504?s=30) | [Nathan Truyts](https://github.com/Nathtruyts)      |   P.O    |
+| ![](https://avatars.githubusercontent.com/u/55259166?s=30) | [Gustavo Santos](https://github.com/gustavols)      | Dev-Team |
+| ![]()                                                     |  [Daniel Luciano](https://github.com/daniellsfilho)  | Dev-Team |
+| ![](https://avatars.githubusercontent.com/u/52466841?s=30) | [Bruno Pisciotta](https://github.com/bruno-pisciotta281)| Dev-Team |
