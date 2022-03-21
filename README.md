@@ -16,27 +16,7 @@
  ## Sobre o projeto 
 
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
- 
- ## Briefing
- 
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
-  
- ## Tecnologias
-  
-As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na construção do projeto até o momento:
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/Windows-017AD7?style=for-the-badge&logo=windows&logoColor=white" /> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" /> <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" /> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
- 
-
- 
- ## VPC - Value Proposition Canvas 
-     
-O VPC - Value Proposition Canvas, ou Canvas de Proposta de Valor, é uma ferramenta desenvolvida com o intuito de estar explorando ainda mais os clientes através dos quadrantes do seguimento de cliente e proposta de valor do quadro de modelo de negócios (business model canvas). O desenvolvimento do nosso canvas ficou da maneira exposta a seguir.
-  
-## BPMN - Business Process Model and Notation
-    
-O BPMN - Business Process Model and Notation, ou a grosso modo Modelo e Notação de Processos de Negócio, se trata de um método de notação das modelagens de processo de negócio, ao qual é estabelecido um padrão para representar os processos graficamente, por meio de diagramas. Tal padrão possui um conjunto de símbolos e regras que permite modelar diferentes fluxos de processos, com diferentes níveis de detalhamento. A seguir está disposto a notação realizada do nosso projeto em aspecto macro. 
-  
 ## Entregas
 Entregas serão realizadas nas seguintes datas:
 
@@ -49,6 +29,33 @@ Entregas serão realizadas nas seguintes datas:
 Seguindo conforme este cronograma estipulado para cada sprint:
 
 <img src=> 
+ 
+ ## Briefing
+ 
+A equipe da IACIT trouxe para a equipe uma deficiência recorrente que gerava retrabalhos na produtividade da empresa, onerando em vários momentos os funcionários. 
+
+Durante o kick-off foi apresentado alguns requisitos para a elaboração de uma aplicação que atendesse as expectativas e solucionasse a problemática em questão.
+
+Sendo assim foi pensado em desenvolver uma interface que abrangesse as heurísticas de Jacob Nielsen, intuitiva e funcional, mantendo todas as ferramentas necessárias para solucionar as causas do retrabalho.
+
+O público-alvo: Funcionários sofrem com o retrabalho; Suporte que atende a solicitação de chamados; Administrador que administra e coordena a área.
+
+O prazo foi estipulado pela FATEC em 3 sprints (vulgo fases), as quais cada uma continha 21 dias, totalizando 63 dias. 
+
+  
+ ## Tecnologias
+  
+As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na construção do projeto até o momento:
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/Windows-017AD7?style=for-the-badge&logo=windows&logoColor=white" /> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" /> <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" /> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
+
+ ## VPC - Value Proposition Canvas 
+     
+O VPC - Value Proposition Canvas, ou Canvas de Proposta de Valor, é uma ferramenta desenvolvida com o intuito de estar explorando ainda mais os clientes através dos quadrantes do seguimento de cliente e proposta de valor do quadro de modelo de negócios (business model canvas). O desenvolvimento do nosso canvas ficou da maneira exposta a seguir.
+  
+## BPMN - Business Process Model and Notation
+    
+O BPMN - Business Process Model and Notation, ou a grosso modo Modelo e Notação de Processos de Negócio, se trata de um método de notação das modelagens de processo de negócio, ao qual é estabelecido um padrão para representar os processos graficamente, por meio de diagramas. Tal padrão possui um conjunto de símbolos e regras que permite modelar diferentes fluxos de processos, com diferentes níveis de detalhamento. A seguir está disposto a notação realizada do nosso projeto em aspecto macro. 
   
 ## Equipe
 |                                                            | User                                                | Função |
