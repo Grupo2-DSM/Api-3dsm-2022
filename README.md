@@ -15,7 +15,7 @@
  
  ## Sobre o projeto 
 
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+Criação de uma ferramenta inteligente em Aplicação Web com back-end com microserviços e front com single-page applications com Login completo, para atuar na identificação das causas de falhas que geram retrabalho. Tal aplicação tem como ferramenta base de dados em NoSQL de registros anteriores que causaram retrabalhos já conhecidos.
 
 ## Entregas
 Entregas serão realizadas nas seguintes datas:
