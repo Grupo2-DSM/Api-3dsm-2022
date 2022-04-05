@@ -1,10 +1,10 @@
 <br id="topo">
 <h1 align = "center"> FATEC Profº Jessen Vidal, SJC - 3º Semestre DSM </h1>
 <p align = "center">
-<img src = "https://github.com/grupo-3dsm/repo_pi/blob/master/assets/img/fatec-logo.png" width = "240px" height = "140px">
-<h1 text align="center"> Good Ticket </h1>
+<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Logo.png" width = "400px" height = "200px">
 
-> Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
+
+<p align = "center"> GoodTicket é um Website Help Desk para suporte técnico acessível e fácil de usar para empresas.
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Grupo2-DSM/Api-3dsm-2022?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/Grupo2-DSM/api-3dsm-2022?style=for-the-badge)
@@ -15,7 +15,25 @@
  
  ## Sobre o projeto 
 
-Criação de uma ferramenta inteligente em Aplicação Web com back-end com microserviços e front com single-page applications com Login completo, para atuar na identificação das causas de falhas que geram retrabalho. Tal aplicação tem como ferramenta base de dados em NoSQL de registros anteriores que causaram retrabalhos já conhecidos.
+Criação de uma ferramenta inteligente em Aplicação Web com back-end com microserviços e front com single-page applications com Login completo, para atuar na identificação das causas de falhas que geram retrabalhos. Tal aplicação tem como ferramenta base de dados em NoSQL de registros anteriores, que causaram retrabalhos, já conhecidos.
+
+## Requisitos 
+
+Inicialmente foram apresentados alguns requisitos funcionais e não funcionais e ao longo das Sprints houve o refinamento e o detalhamento dos requisitos. 
+
+**Funcionais**  |    | **Não Funcionais** |
+:--------------:|:--:|:--------------:|
+Login completo  |    |Front-end: TypeScript |
+Cadastros de Usuários, Equipamentos e Horários | |Back-end: Java |
+Usuários devem ter perfis diferentes (administrador, suporte, cliente)| | Banco de Dados:  NoSQL |
+Registro de chamados | | Documentações |
+Análise de Causa Raiz  |
+Acompanhamento de chamados de ponta a ponta |
+
+## Backlog do Produto 
+
+![Backlog do Produto](./img/Backlog_Produto.png)
+
 
 ## Entregas
 Entregas serão realizadas nas seguintes datas:
@@ -47,7 +65,7 @@ O prazo foi estipulado pela FATEC em 3 sprints (vulgo fases), as quais cada uma 
   
 As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na construção do projeto até o momento:
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/Windows-017AD7?style=for-the-badge&logo=windows&logoColor=white" /> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" /> <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" /> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
+ <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" /> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
 
  ## VPC - Value Proposition Canvas 
      
@@ -67,3 +85,4 @@ O BPMN - Business Process Model and Notation, ou a grosso modo Modelo e Notaçã
 | ![](https://avatars.githubusercontent.com/u/55259166?s=30) | [Gustavo Santos](https://github.com/gustavols)      | Dev-Team |
 | ![]()                                                     |  [Daniel Luciano](https://github.com/daniellsfilho)  | Dev-Team |
 | ![](https://avatars.githubusercontent.com/u/52466841?s=30) | [Bruno Pisciotta](https://github.com/bruno-pisciotta281)| Dev-Team |
+
