@@ -69,11 +69,11 @@ As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na 
 
  ## VPC - Value Proposition Canvas 
      
-O VPC - Value Proposition Canvas, ou Canvas de Proposta de Valor, é uma ferramenta desenvolvida com o intuito de estar explorando ainda mais os clientes através dos quadrantes do seguimento de cliente e proposta de valor do quadro de modelo de negócios (business model canvas). O desenvolvimento do nosso canvas ficou da maneira exposta a seguir.
+O VPC - Value Proposition Canvas, ou Canvas de Proposta de Valor, é uma ferramenta desenvolvida com o intuito de explorar informções dos clientes através dos quadrantes do seguimento de cliente e proposta de valor do quadro de modelo de negócios (business model canvas). O desenvolvimento do nosso canvas ficou da maneira exposta a seguir.
   
 ## BPMN - Business Process Model and Notation
     
-O BPMN - Business Process Model and Notation, ou a grosso modo Modelo e Notação de Processos de Negócio, se trata de um método de notação das modelagens de processo de negócio, ao qual é estabelecido um padrão para representar os processos graficamente, por meio de diagramas. Tal padrão possui um conjunto de símbolos e regras que permite modelar diferentes fluxos de processos, com diferentes níveis de detalhamento. A seguir está disposto a notação realizada do nosso projeto em aspecto macro. 
+O BPMN - Business Process Model and Notation, ou a grosso modo, Modelo e Notação de Processos de Negócio, trata-se de um método de notação das modelagens de processo de negócio, ao qual é estabelecido um padrão para representar os processos graficamente, por meio de diagramas. Tal padrão possui um conjunto de símbolos e regras que permite modelar diferentes fluxos de processos, com diferentes níveis de detalhamento. A seguir está disposto a notação realizada do nosso projeto em aspecto macro. 
   
 ## Equipe
 |                                                            | User                                                | Função |
