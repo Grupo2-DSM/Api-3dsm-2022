@@ -1,25 +1,32 @@
 {
-    "_id":{"$oid":"624d69ad1a4b69399bb52517"},
-    "titulo":"Chamado teste 2",
-    "descricao":"Só pra ver se o get by id tá funfando",
-    "tipo":"software",
-    "equipamento":"Notebook",
-    "descri_equipamento":"Especificações aqui!!!",
-    "num_maquina":{"$numberInt":"0"},
-    "local":"Fatec SJC",
-    "sala":{"$numberInt":"303"},
-    "datahora":{
-        "$date":{"$numberLong":"1649196474627"}
+    "_id":
+    {
+        "$oid":"62500ebabf88e01961beceb4"
     },
-    "resolucao":"Resolução aleatória",
+    "titulo":"Problema no windows, Lula não vai ganhar",
+    "descricao":"Windows está apresentando tela azul",
+    "tipo":"Software",
+    "equipamento":"Computador",
+    "descri_equipamento":"Lula vai ganhar",
+    "num_maquina":
+        {
+            "$numberDouble":"10.0"
+        },
+    "local":"Sede da empresa",
+    "sala":
+        {
+            "$numberDouble":"26.0"
+        },
+    "resolucao":"Desinstalar e instalar novamente o sistema operacional",
     "resolvido":"Sim",
-    "dificuldade":"Fácil",
-    "prioridade":"Baixa",
-    "relator":{
-        "nome":"Daniel",
-        "email":"daniel123@gmail.com",
-        "departamento":"Testes",
-        "cargo":"Aleatório"
-    },
+    "relator":
+        [
+            {
+                "nome":"Isabelle",
+                "email":"isabelle.silva11@fatec.sp.gov.br",
+                "departamento":"Engenharia",
+                "cargo":"Estagiária"
+            }
+        ],
     "_class":"com.example.banco.demo.entidades.Chamado"
 }
