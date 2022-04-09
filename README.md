@@ -16,6 +16,27 @@
  ## Sobre o projeto 
 
 Criação de uma ferramenta inteligente em Aplicação Web com back-end com microserviços e front com single-page applications com Login completo, para atuar na identificação das causas de falhas que geram retrabalhos. Tal aplicação tem como ferramenta base de dados em NoSQL de registros anteriores, que causaram retrabalhos, já conhecidos.
+ 
+  ## Briefing
+ 
+A equipe da IACIT trouxe para a equipe uma deficiência recorrente que gerava retrabalhos na produtividade da empresa, onerando em vários momentos os funcionários. 
+
+Durante o kick-off foi apresentado alguns requisitos para a elaboração de uma aplicação que atendesse as expectativas e solucionasse a problemática em questão.
+
+Sendo assim foi pensado em desenvolver uma interface que abrangesse as heurísticas de Jacob Nielsen, intuitiva e funcional, mantendo todas as ferramentas necessárias para solucionar as causas do retrabalho.
+
+O público-alvo: Funcionários que sofrem com o retrabalho; Suporte que atende a solicitação de chamados; Administrador que administra e coordena a área.
+
+O prazo foi estipulado pela FATEC em 3 sprints (vulgo fases), as quais cada uma continha 21 dias, totalizando 63 dias. 
+ 
+ ## Entregas
+Entregas serão realizadas nas seguintes datas:
+
+**Sprint**  | **Entrega** | **Status**         | **Link**
+:---------: | :------:    | :-------:          | :-------:
+01          | 14/04/2021  | [![Generic badge](https://img.shields.io/badge/-Em%20curso-orange)](https://shields.io/)  | [Acessar] |
+02          | 15/05/2021  | [![Generic badge](https://img.shields.io/badge/-Em%20curso-orange)](https://shields.io/)  | [Acessar]
+03          | 05/06/2021  | [![Generic badge](https://img.shields.io/badge/-Em%20curso-orange)](https://shields.io/)  | [Acessar]
 
 ## Requisitos 
 
@@ -32,35 +53,9 @@ Acompanhamento de chamados de ponta a ponta |
 
 ## Backlog do Produto 
 
-![Backlog do Produto](./img/Backlog_Produto.png)
+<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Produto.png" width = "1000px" height = "500px">
 
 
-## Entregas
-Entregas serão realizadas nas seguintes datas:
-
-**Sprint**  | **Entrega** | **Status**         | **Link**
-:---------: | :------:    | :-------:          | :-------:
-01          | 14/04/2021  | [![Generic badge](https://img.shields.io/badge/-Em%20curso-orange)](https://shields.io/)  | [Acessar] |
-02          | 15/05/2021  | [![Generic badge](https://img.shields.io/badge/-Em%20curso-orange)](https://shields.io/)  | [Acessar]
-03          | 05/06/2021  | [![Generic badge](https://img.shields.io/badge/-Em%20curso-orange)](https://shields.io/)  | [Acessar]
-    
-Seguindo conforme este cronograma estipulado para cada sprint:
-
-<img src=> 
- 
- ## Briefing
- 
-A equipe da IACIT trouxe para a equipe uma deficiência recorrente que gerava retrabalhos na produtividade da empresa, onerando em vários momentos os funcionários. 
-
-Durante o kick-off foi apresentado alguns requisitos para a elaboração de uma aplicação que atendesse as expectativas e solucionasse a problemática em questão.
-
-Sendo assim foi pensado em desenvolver uma interface que abrangesse as heurísticas de Jacob Nielsen, intuitiva e funcional, mantendo todas as ferramentas necessárias para solucionar as causas do retrabalho.
-
-O público-alvo: Funcionários sofrem com o retrabalho; Suporte que atende a solicitação de chamados; Administrador que administra e coordena a área.
-
-O prazo foi estipulado pela FATEC em 3 sprints (vulgo fases), as quais cada uma continha 21 dias, totalizando 63 dias. 
-
-  
  ## Tecnologias
   
 As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na construção do projeto até o momento:
@@ -70,10 +65,18 @@ As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na 
  ## VPC - Value Proposition Canvas 
      
 O VPC - Value Proposition Canvas, ou Canvas de Proposta de Valor, é uma ferramenta desenvolvida com o intuito de explorar informções dos clientes através dos quadrantes do seguimento de cliente e proposta de valor do quadro de modelo de negócios (business model canvas). O desenvolvimento do nosso canvas ficou da maneira exposta a seguir.
+
+<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/VPC.png" width = "1000px" height = "500px">
+ 
+ 
   
 ## BPMN - Business Process Model and Notation
     
 O BPMN - Business Process Model and Notation, ou a grosso modo, Modelo e Notação de Processos de Negócio, trata-se de um método de notação das modelagens de processo de negócio, ao qual é estabelecido um padrão para representar os processos graficamente, por meio de diagramas. Tal padrão possui um conjunto de símbolos e regras que permite modelar diferentes fluxos de processos, com diferentes níveis de detalhamento. A seguir está disposto a notação realizada do nosso projeto em aspecto macro. 
+ 
+ <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/BPMN.png" width = "1000px" height = "800px">
+ 
+ 
   
 ## Equipe
 |                                                            | User                                                | Função |
