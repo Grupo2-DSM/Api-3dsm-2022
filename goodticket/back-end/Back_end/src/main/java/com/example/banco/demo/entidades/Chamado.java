@@ -1,6 +1,7 @@
 package com.example.banco.demo.entidades;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Id;
 
@@ -42,4 +43,5 @@ public class Chamado {
 	private String prioridade;
 	
 	private Cliente relator;
+
 }

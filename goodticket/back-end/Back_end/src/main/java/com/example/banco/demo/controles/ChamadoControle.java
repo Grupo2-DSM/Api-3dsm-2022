@@ -52,8 +52,14 @@ public class ChamadoControle {
 	}
 	
 	@PostMapping("/chamado/inserir")
-	public void inserirChamado(@RequestBody Chamado chamado) {
-		repositorio.save(chamado);
+	public ResponseEntity<?> inserirChamado(@RequestBody Chamado chamado) {
+		HttpStatus status = HttpStatus.CONFLICT;
+		if (chamado.getId() == null) {
+			repositorio.save(chamado);
+			status = HttpStatus.CREATED;
+		}
+		return new ResponseEntity<>(status);
+
 	}
 	
 	@PutMapping("/chamado/atualizar")
@@ -80,7 +86,19 @@ public class ChamadoControle {
 	
 	
 	@DeleteMapping("/chamado/deletar")
-	public void deletarCliente(@RequestBody Chamado chamado) {
-		repositorio.deleteById(chamado.getId());
+	public ResponseEntity<?> deletarChamado(@RequestBody Chamado delecao) {
+		HttpStatus status = HttpStatus.BAD_REQUEST;
+		List<Chamado> chamados = repositorio.findAll();
+		Chamado selecionado = null;
+		for (Chamado chamado : chamados) {
+			if (chamado.getId().equals(delecao.getId())) {
+				selecionado = chamado;
+			}
+		}
+		if (selecionado != null) {
+			repositorio.delete(selecionado);
+			status = HttpStatus.OK;
+		}
+		return new ResponseEntity<>(status);
 	}
 }

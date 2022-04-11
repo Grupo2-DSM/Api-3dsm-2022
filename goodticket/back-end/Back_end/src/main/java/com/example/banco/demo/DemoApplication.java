@@ -37,7 +37,6 @@ public class DemoApplication {
 			
 			Chamado chamado = new Chamado();
 			
-			chamado.setRelator(relator);
 			chamado.setTitulo("Chamado teste");
 			chamado.setDescricao("Só um chamado teste msm");
 			chamado.setTipo("software");
