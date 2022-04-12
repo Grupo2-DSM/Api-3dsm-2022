@@ -6,17 +6,17 @@
 
 <p align = "center"> GoodTicket é um Website Help Desk para suporte técnico acessível e fácil de usar para empresas.
  
- | <a href="Sobre">Sobre o Projeto</a>
- | <a href="Briefing">Briefing</a>
- | <a href="Entregas">Entregas</a>
- | <a href="Requisitos">Regisitos</a>
- | <a href="Backlog">Backlog do Produto</a>
- | <a href="Tecnologias">Tecnologias</a>
- | <a href="VPC">VPC</a>
- | <a href="BPMN">BPMN</a>
- | <a href="Organização">Organização</a>
- | <a href="Execução">Execução</a>
- | <a href="Equipe">Equipe</a> |
+ | <a href="#Sobre">Sobre o Projeto</a>
+ | <a href="#Briefing">Briefing</a>
+ | <a href="#Entregas">Entregas</a>
+ | <a href="#Requisitos">Regisitos</a>
+ | <a href="#Backlog">Backlog do Produto</a>
+ | <a href="#Tecnologias">Tecnologias</a>
+ | <a href="#VPC">VPC</a>
+ | <a href="#BPMN">BPMN</a>
+ | <a href="#Organização">Organização</a>
+ | <a href="#Execução">Execução</a>
+ | <a href="#Equipe">Equipe</a> |
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Grupo2-DSM/Api-3dsm-2022?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/Grupo2-DSM/api-3dsm-2022?style=for-the-badge)
