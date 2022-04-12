@@ -5,6 +5,18 @@
 
 
 <p align = "center"> GoodTicket é um Website Help Desk para suporte técnico acessível e fácil de usar para empresas.
+ 
+ | <a href="Sobre">Sobre o Projeto</a>
+ | <a href="Briefing">Briefing</a>
+ | <a href="Entregas">Entregas</a>
+ | <a href="Requisitos">Regisitos</a>
+ | <a href="Backlog">Backlog do Produto</a>
+ | <a href="Tecnologias">Tecnologias</a>
+ | <a href="VPC">VPC</a>
+ | <a href="BPMN">BPMN</a>
+ | <a href="Organização">Organização</a>
+ | <a href="Execução">Execução</a>
+ | <a href="Equipe">Equipe</a> |
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Grupo2-DSM/Api-3dsm-2022?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/Grupo2-DSM/api-3dsm-2022?style=for-the-badge)
@@ -12,12 +24,16 @@
 ![Bitbucket open issues](https://img.shields.io/github/issues-raw/Grupo2-DSM/api-3dsm-2022?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/github/issues-pr/Grupo2-DSM/api-3dsm-2022?style=for-the-badge)
 
- 
+ <span id="Sobre">
+
 ## Sobre o projeto 
  
 
 Criação de uma ferramenta inteligente em Aplicação Web com back-end com microserviços e front com single-page applications com Login completo, para atuar na identificação das causas de falhas que geram retrabalhos. Tal aplicação tem como ferramenta base de dados em NoSQL de registros anteriores, que causaram retrabalhos, já conhecidos.
  
+→ [Voltar ao topo](#topo)
+  
+ <span id="Briefing">
 
 ## Briefing
  
@@ -29,7 +45,12 @@ O público-alvo: Funcionários que sofrem com o retrabalho, Suporte que atende a
 
 O prazo foi estipulado pela FATEC em 3 sprints (vulgo fases), as quais cada uma contém 21 dias, totalizando 63 dias. 
  
- ## Entregas
+ → [Voltar ao topo](#topo)
+  
+ <span id="Entregas">
+
+## Entregas
+  
 Entregas serão realizadas nas seguintes datas:
 
 **Sprint**  | **Entrega** | **Status**         | **Link**
@@ -37,6 +58,10 @@ Entregas serão realizadas nas seguintes datas:
 01          | 14/04/2021  | [![Generic badge](https://img.shields.io/badge/-Em%20curso-orange)](https://shields.io/)  | <a href="https://github.com/Grupo2-DSM/Api-3dsm-2022/tree/main/goodticket">Sprint 1</a> |
 02          | 15/05/2021  | [![Generic badge](https://img.shields.io/badge/-Em%20curso-orange)](https://shields.io/)  | [Acessar]
 03          | 05/06/2021  | [![Generic badge](https://img.shields.io/badge/-Em%20curso-orange)](https://shields.io/)  | [Acessar]
+ 
+ → [Voltar ao topo](#topo)
+  
+ <span id="Requisitos">
 
 ## Requisitos 
 
@@ -50,34 +75,49 @@ Usuários devem ter perfis diferentes (administrador, suporte, cliente)| | Banco
 Registro de chamados | | Documentações |
 Análise de Causa Raiz  |
 Acompanhamento de chamados de ponta a ponta |
+ 
+ → [Voltar ao topo](#topo)
+  
+ <span id="Backlog">
 
 ## Backlog do Produto 
 
 <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Produto.png">
+ 
+→ [Voltar ao topo](#topo)
+   
+ <span id="Tecnologias">
 
-
- ## Tecnologias
+## Tecnologias
   
 As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na construção do projeto até o momento:
 
  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" /> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
+ 
+ → [Voltar ao topo](#topo)
 
- ## VPC - Value Proposition Canvas 
+ <span id="VPC">
+
+## VPC - Value Proposition Canvas 
      
 O VPC - Value Proposition Canvas, ou Canvas de Proposta de Valor, é uma ferramenta desenvolvida com o intuito de explorar informções dos clientes através dos quadrantes do seguimento de cliente e proposta de valor do quadro de modelo de negócios (business model canvas). O desenvolvimento do nosso canvas ficou da maneira exposta a seguir.
 
 <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/VPC.png" >
  
+ → [Voltar ao topo](#topo)
  
-  
+ <span id="BPMN">
+
 ## BPMN - Business Process Model and Notation
     
 O BPMN - Business Process Model and Notation, ou a grosso modo, Modelo e Notação de Processos de Negócio, trata-se de um método de notação das modelagens de processo de negócio, ao qual é estabelecido um padrão para representar os processos graficamente, por meio de diagramas. Tal padrão possui um conjunto de símbolos e regras que permite modelar diferentes fluxos de processos, com diferentes níveis de detalhamento. A seguir está disposto a notação realizada do nosso projeto em aspecto macro. 
  
  <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/BPMN.png" >
  
- 
- 
+ → [Voltar ao topo](#topo)
+  
+ <span id="Organização">
+
 ## Organização
 
 Os arquivos do projeto estão organizados em duas pastas principais, sendo elas: 
@@ -98,11 +138,16 @@ Cada serviço foi desenvolvido em torno de um conjunto de regras de negócio esp
 ### 📁 <a href="https://github.com/Grupo2-DSM/Api-3dsm-2022/tree/main/goodticket/back-end/Banco_dados">/back_end/banco_dados</a>:
 Contém a estrurura de Banco de dados hospedado no site https://www.mongodb.com/pt-br 
  
- ## Executando a Aplicação
+ → [Voltar ao topo](#topo)
  
- 
+ <span id="Execução">
 
-  
+## Executando a Aplicação
+ 
+ → [Voltar ao topo](#topo)
+ 
+  <span id="Equipe">
+
 ## Equipe
 |                                                            | User                                                | Função |
 | :--------------------------------------------------------- | :-----------------------------------------------    | :------- |
@@ -114,3 +159,4 @@ Contém a estrurura de Banco de dados hospedado no site https://www.mongodb.com/
 | ![]()                                                     |  [Daniel Luciano](https://github.com/daniellsfilho)  | Dev-Team |
 | ![](https://avatars.githubusercontent.com/u/52466841?s=30) | [Bruno Pisciotta](https://github.com/bruno-pisciotta281)| Dev-Team |
 
+ → [Voltar ao topo](#topo)
