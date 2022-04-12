@@ -1,12 +1,12 @@
 {
     "_id": {
-        "$oid": "62502f40dc4ff10efc3e2633"
+        "$oid": "62557da1b5adb382311c6ec0"
     },
-    "titulo": "Problema no windows",
-    "descricao": "Windows está apresentando tela azul",
-    "tipo": "Software",
-    "equipamento": "Computador",
-    "descri_equipamento": "notebook acer aspire 3 intel core i3 8th geração",
+    "titulo": "Estabilizador está com defeito",
+    "descricao": "Estabilizador está apresentando som de estalos",
+    "tipo": "Hardware",
+    "equipamento": "Estabilizador",
+    "descri_equipamento": "Estabilizador SNS 220V",
     "num_maquina": {
         "$numberDouble": "10.0"
     },
@@ -14,8 +14,15 @@
     "sala": {
         "$numberDouble": "26.0"
     },
-    "resolucao": "Desinstalar e instalar novamente o sistema operacional",
+    "datahora": {
+        "$date": {
+            "$numberLong": "1649732400000"
+        }
+    },
+    "resolucao": "Efetuar o teste em outras tomadas, caso o barulho continue, efetuar a troca do hardware",
     "resolvido": "Sim",
+    "dificuldade": "fácil",
+    "prioridade": "baixa",
     "relator": {
         "nome": "Isabelle",
         "email": "isabelle.silva11@fatec.sp.gov.br",
