@@ -66,7 +66,7 @@ As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na 
      
 O VPC - Value Proposition Canvas, ou Canvas de Proposta de Valor, é uma ferramenta desenvolvida com o intuito de explorar informções dos clientes através dos quadrantes do seguimento de cliente e proposta de valor do quadro de modelo de negócios (business model canvas). O desenvolvimento do nosso canvas ficou da maneira exposta a seguir.
 
-<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/VPC.png" width = "1000px" height = "500px">
+<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/VPC.png" width = "1200px" height = "500px">
  
  
   
@@ -74,7 +74,7 @@ O VPC - Value Proposition Canvas, ou Canvas de Proposta de Valor, é uma ferrame
     
 O BPMN - Business Process Model and Notation, ou a grosso modo, Modelo e Notação de Processos de Negócio, trata-se de um método de notação das modelagens de processo de negócio, ao qual é estabelecido um padrão para representar os processos graficamente, por meio de diagramas. Tal padrão possui um conjunto de símbolos e regras que permite modelar diferentes fluxos de processos, com diferentes níveis de detalhamento. A seguir está disposto a notação realizada do nosso projeto em aspecto macro. 
  
- <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/BPMN.png" width = "1000px" height = "800px">
+ <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/BPMN.png" width = "1200px" height = "700px">
  
  
   
