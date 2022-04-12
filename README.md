@@ -11,6 +11,7 @@
  | <a href="#Entregas">Entregas</a>
  | <a href="#Requisitos">Regisitos</a>
  | <a href="#Backlog">Backlog do Produto</a>
+ | <a href="#User">User Stories</a>  
  | <a href="#Tecnologias">Tecnologias</a>
  | <a href="#VPC">VPC</a>
  | <a href="#BPMN">BPMN</a>
@@ -29,7 +30,7 @@
 ## Sobre o projeto 
  
 
-Criação de uma ferramenta inteligente em Aplicação Web com back-end com microserviços e front com single-page applications com Login completo, para atuar na identificação das causas de falhas que geram retrabalhos. Tal aplicação tem como ferramenta base de dados em NoSQL de registros anteriores, que causaram retrabalhos, já conhecidos.
+Criação de uma ferramenta inteligente em Aplicação Web com back-end com microserviços e front-end em single-page applications com Login completo, para atuar na identificação das causas de falhas que geram retrabalhos. Tal aplicação tem como ferramenta base de dados em NoSQL de registros anteriores, que causaram retrabalhos, já conhecidos.
  
 → [Voltar ao topo](#topo)
   
@@ -39,11 +40,11 @@ Criação de uma ferramenta inteligente em Aplicação Web com back-end com micr
  
 A equipe da IACIT trouxe para a equipe uma deficiência recorrente que gerava retrabalhos na produtividade da empresa, onerando em vários momentos os funcionários. 
 
-Durante o kick-off foi apresentado alguns requisitos para a elaboração de uma aplicação que atendesse as expectativas e solucionasse a problemática em questão. Sendo assim foi pensado em desenvolver uma interface que abrangesse as heurísticas de Jacob Nielsen, intuitiva e funcional, mantendo todas as ferramentas necessárias para solucionar as causas do retrabalho.
+Durante o kick-off foi apresentado alguns requisitos para a elaboração de uma aplicação que atendesse as expectativas e solucionasse a problemática em questão. Sendo assim foi pensado em desenvolver uma interface que abrangesse as heurísticas de Jacob Nielsen e do Web Content Accessibility Guidelines (WCAG) do W3C, intuitiva e funcional, mantendo todas as ferramentas necessárias para solucionar as causas do retrabalho.
 
 O público-alvo: Funcionários que sofrem com o retrabalho, Suporte que atende a solicitação de chamados, Administrador que administra e coordena a área.
 
-O prazo foi estipulado pela FATEC em 3 sprints (vulgo fases), as quais cada uma contém 21 dias, totalizando 63 dias. 
+O prazo foi estipulado pela FATEC em 3 sprints, as quais cada uma contém 21 dias, totalizando 63 dias. 
  
  → [Voltar ao topo](#topo)
   
@@ -67,14 +68,7 @@ Entregas serão realizadas nas seguintes datas:
 
 Inicialmente foram apresentados alguns requisitos funcionais e não funcionais e ao longo das Sprints houve o refinamento e o detalhamento dos requisitos. 
 
-**Funcionais**  |    | **Não Funcionais** |
-:--------------:|:--:|:--------------:|
-Login completo  |    |Front-end: TypeScript |
-Cadastros de Usuários, Equipamentos e Horários | |Back-end: Java |
-Usuários devem ter perfis diferentes (administrador, suporte, cliente)| | Banco de Dados:  NoSQL |
-Registro de chamados | | Documentações |
-Análise de Causa Raiz  |
-Acompanhamento de chamados de ponta a ponta |
+<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Requisitos.png">
  
  → [Voltar ao topo](#topo)
   
@@ -82,7 +76,15 @@ Acompanhamento de chamados de ponta a ponta |
 
 ## Backlog do Produto 
 
-<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Produto.png">
+<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Produto_novo.png">
+ 
+→ [Voltar ao topo](#topo)
+  
+  <span id="User">
+
+## User Stories 
+
+<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/User_Stories.png">
  
 → [Voltar ao topo](#topo)
    
@@ -129,10 +131,10 @@ O BPMN - Business Process Model and Notation, ou a grosso modo, Modelo e Notaç�
 
 ## Organização
 
-Os arquivos do projeto estão organizados em duas pastas principais, sendo elas: 
+Os arquivos do projeto estão organizados em uma pasta principai, sendo: 
  
 ### 📁 <a href="https://github.com/Grupo2-DSM/Api-3dsm-2022/tree/main/goodticket">/goodticket</a>:
-Contém o codigo-fonte.
+Contém o codigo-fonte, que subdivide-se em:
 
 ### 📁 <a href="https://github.com/Grupo2-DSM/Api-3dsm-2022/tree/main/goodticket/front-end">/front_end</a>:
 Contém o Front-end desenvolvido em React e TypeScript com construção em página única, em que o browser vai renderizar o core da aplicação apenas uma vez – todas as outras informações serão carregadas por demanda, de acordo com a necessidade do usuário, o que gera um melhor custo-benefício.
@@ -144,7 +146,7 @@ Contém o Back-end que dividi-se em Back-end propriamente dito e Banco de Dados.
 Contém o Back-end , implementado com uma arquitetura de microsserviços que consiste em uma coleção de serviços pequenos e autônomos. 
 Cada serviço foi desenvolvido em torno de um conjunto de regras de negócio específico, e foi implementado de forma independente, o que possibilitará uma manutenção e evolução dos serviços de forma mais estáveis, permitindo uma maior flexibilidade de tecnologias, colocar alterações em produção.
  
-### 📁 <a href="https://github.com/Grupo2-DSM/Api-3dsm-2022/tree/main/goodticket/back-end/Banco_dados">/back_end/banco_dados</a>:
+### 📁 <a href="https://github.com/Grupo2-DSM/Api-3dsm-2022/tree/main/goodticket/back-end/Banco_dados">/back_end/Banco_dados</a>:
 Contém a estrurura de Banco de dados hospedado no site https://www.mongodb.com/pt-br 
  
  → [Voltar ao topo](#topo)
