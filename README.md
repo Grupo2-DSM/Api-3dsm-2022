@@ -160,14 +160,14 @@ Contém a estrurura de Banco de dados hospedado no site https://www.mongodb.com/
   <span id="Equipe">
 
 ## Equipe
-|                                                            | User                                                | Função |
-| :--------------------------------------------------------- | :-----------------------------------------------    | :------- |
-| ![](https://avatars.githubusercontent.com/u/78958795?s=30) | [Ana Carolina do Santos](https://github.com/annakks)|   S.M    |
-| ![](https://avatars.githubusercontent.com/u/78803504?s=30) | [Nathan Truyts](https://github.com/Nathtruyts)      |   P.O    |
-| ![](https://avatars.githubusercontent.com/u/79321198?s=30) | [Isabelle Ribeiro](https://github.com/drisabelles)  | Dev-Team |
-| ![](https://avatars.githubusercontent.com/u/69692614?s=30) | [Vinicius Buarque](https://github.com/vbuarque)     | Dev-Team |
-| ![](https://avatars.githubusercontent.com/u/55259166?s=30) | [Gustavo Santos](https://github.com/gustavols)      | Dev-Team |
-| ![]()                                                     |  [Daniel Luciano](https://github.com/daniellsfilho)  | Dev-Team |
-| ![](https://avatars.githubusercontent.com/u/52466841?s=30) | [Bruno Pisciotta](https://github.com/bruno-pisciotta281)| Dev-Team |
+|                                                            | User                                                | Função |  |
+| :--------------------------------------------------------- | :-----------------------------------------------    | :------- | :-------|
+| ![](https://avatars.githubusercontent.com/u/78958795?s=30) | [Ana Carolina do Santos](https://github.com/annakks)|   S.M    | [LinkedIn](https://www.linkedin.com/in/ana-santos-856436145/) |
+| ![](https://avatars.githubusercontent.com/u/78803504?s=30) | [Nathan Truyts](https://github.com/Nathtruyts)      |   P.O    | [LinkedIn](https://www.linkedin.com/in/nathan-truyts-43737020a/) |
+| ![](https://avatars.githubusercontent.com/u/79321198?s=30) | [Isabelle Ribeiro](https://github.com/drisabelles)  | Dev-Team | [LinkedIn](https://www.linkedin.com/in/drisabelles/) |
+| ![](https://avatars.githubusercontent.com/u/69692614?s=30) | [Vinicius Buarque](https://github.com/vbuarque)     | Dev-Team | [LinkedIn](https://www.linkedin.com/in/vinicius-buarque-de-gusm%C3%A3o-catonho-9b11911a7/) |
+| ![](https://avatars.githubusercontent.com/u/55259166?s=30) | [Gustavo Santos](https://github.com/gustavols)      | Dev-Team | [LinkedIn](https://www.linkedin.com/in/gustavo-santos2002/) |
+| ![]()                                                     |  [Daniel Luciano](https://github.com/daniellsfilho)  | Dev-Team | [LinkedIn](https://www.linkedin.com/in/daniel-filho-3b6583209/) |
+| ![](https://avatars.githubusercontent.com/u/52466841?s=30) | [Bruno Pisciotta](https://github.com/bruno-pisciotta281)| Dev-Team | [LinkedIn](https://www.linkedin.com/in/bruno-pisciotta-577216198/) |
 
  → [Voltar ao topo](#topo)
