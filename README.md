@@ -53,7 +53,7 @@ Acompanhamento de chamados de ponta a ponta |
 
 ## Backlog do Produto 
 
-<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Produto.png" width = "1000px" height = "500px">
+<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Produto.png">
 
 
  ## Tecnologias
