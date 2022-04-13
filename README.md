@@ -76,19 +76,19 @@ Inicialmente foram apresentados alguns requisitos funcionais e não funcionais e
 
 ## Backlogs
   
- Produto
+ ### Produto
 
 <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Produto.png">
   
- Sprint 1
+ ### Sprint 1
   
 <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Sprint1.png">
   
- Sprint 2
+ ### Sprint 2
   
  <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Sprint2.png">
   
- Sprint 3
+ ### Sprint 3
   
  <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Sprint3.png">
  
