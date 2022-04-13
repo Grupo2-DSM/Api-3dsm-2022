@@ -10,7 +10,7 @@
  | <a href="#Briefing">Briefing</a>
  | <a href="#Entregas">Entregas</a>
  | <a href="#Requisitos">Regisitos</a>
- | <a href="#Backlog">Backlog do Produto</a>
+ | <a href="#Backlog">Backlogs</a>
  | <a href="#User">User Stories</a>  
  | <a href="#Tecnologias">Tecnologias</a>
  | <a href="#VPC">VPC</a>
@@ -74,9 +74,23 @@ Inicialmente foram apresentados alguns requisitos funcionais e não funcionais e
   
  <span id="Backlog">
 
-## Backlog do Produto 
+## Backlogs
+  
+ Produto
 
-<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Produto_novo.png">
+<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Produto.png">
+  
+ Sprint 1
+  
+<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Sprint1.png">
+  
+ Sprint 2
+  
+ <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Sprint2.png">
+  
+ Sprint 3
+  
+ <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Sprint3.png">
  
 → [Voltar ao topo](#topo)
   
