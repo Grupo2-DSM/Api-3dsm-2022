@@ -5,7 +5,9 @@
     <a href="#objetivos">Objetivos da Sprint</a> | 
     <a href="#prototipo">Protótipo</a> |
     <a href="#backlog">backlog</a> |
-    <a href="#entregas">Entregas</a>
+    <a href="#entregas">Entregas</a> |
+    <a href="#Burndown">Burndown</a> |
+    
     
 </p>
  
@@ -19,7 +21,7 @@
     
  - [x] Modelar o banco de dados de chamados (NoSQL)
  - [x] Programar toda a parte do backend e suas requisições
- - [x] Protipagem das telas de login e cadastro
+ - [x] Prototipagem das telas de login e cadastro
  - [x] Construção da parte visual do envio de chamados (frontend)
  - [x] conectar todas as partes do projeto (B.D, Front e Back)
     
@@ -118,4 +120,43 @@ O frontend integrado a todo o backend, trocando dados entre si.
     
 ![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/GoodTicket-Google-Chrome-2022-04-14-09-48-08.gif)   
     
-→ [Voltar ao topo](#topo)    
+→ [Voltar ao topo](#topo)  
+    
+<span id="Burndown">
+    
+## Burndown
+    
+O Burndown é uma ferramenta visual do Scrum que permite verificar se o trabalho está dentro do esperado no que se refere ao cronograma, ajudando a medir a produtividade e o desempenho da equipe nos quesitos esforço, tempo e prazo de entrega.
+
+### Tarefas   
+    
+Divisão de tarefas com os respectivos responsáveis, com as datas de início e término.
+    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Burndown_tarefas.png)  
+    
+### Horas 
+    
+Acompanhamento diário das horas trabalhadas, exceto os finais de semana.
+    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Burndown_horas.png)  
+
+### Gráfico 
+    
+No Burndown chart é possível ver a taxa de progresso da equipe na Sprint, ajudando a enxergar o seu progresso na conclusão de uma Sprint. O gráfico não aponta apenas o cumprimento dos prazos, também mostra como a equipe atuou com o fluxo de atividades. Com essa ferramenta, será possível verificar se a equipe está adiantada, dentro do cronograma ou em atraso.
+    
+Essa representação gráfica é formada por dois eixos: Y (vertical), que vai representar o trabalho que precisa ser realizado, e X (horizontal), que representa o tempo -- quantidade de trabalho, estipulada em dias ou horas, para concluir a demanda.
+    
+* Linha de trabalho ideal (Azul)
+    
+A linha ideal do gráfico de Burndown conectar o ponto inicial ao ponto final do trabalho. Mostra a soma das estimativas para todas as tarefas que precisam ser terminadas.
+    
+* Linha de trabalho real (Vermelho)
+    
+Essa linha apresenta o trabalho real, que no início, o trabalho restante as duas linhas são iguais, porém, à medida que o projeto progride, a linha real flutua acima e abaixo da linha ideal.
+    
+Segue o Burndown da Equipe na Sprint 1: 
+
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Burndown_grafico.png)  
+    
+→ [Voltar ao topo](#topo)  
+
