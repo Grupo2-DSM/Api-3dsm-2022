@@ -138,7 +138,7 @@ Divisão de tarefas com os respectivos responsáveis, com as datas de início e 
     
 Acompanhamento diário das horas trabalhadas, exceto os finais de semana.
     
-![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Burndown_horas.png)  
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Burndown_ac_horas.png)  
 
 ### Gráfico 
     
