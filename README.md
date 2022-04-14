@@ -116,4 +116,6 @@ Interface navegável por onde o usuário irá interagir com a aplicação para e
     
 O frontend integrado a todo o backend, trocando dados entre si. 
     
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/GoodTicket-Google-Chrome-2022-04-14-09-48-08.gif)   
+    
 → [Voltar ao topo](#topo)    
