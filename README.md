@@ -156,14 +156,8 @@ Contém o codigo-fonte, que subdivide-se em:
 Contém o Front-end desenvolvido em React e TypeScript com construção em página única, em que o browser vai renderizar o core da aplicação apenas uma vez – todas as outras informações serão carregadas por demanda, de acordo com a necessidade do usuário, o que gera um melhor custo-benefício.
 
 > ### 📁 <a href="https://github.com/Grupo2-DSM/Api-3dsm-2022/tree/main/goodticket/back-end">/back_end</a>:
-Contém o Back-end que dividi-se em Back-end propriamente dito e Banco de Dados.
- 
->> ### 📁 <a href="https://github.com/Grupo2-DSM/Api-3dsm-2022/tree/main/goodticket/back-end/Back_end">/back_end/Back_end</a>:
 Contém o Back-end , implementado com uma arquitetura de microsserviços que consiste em uma coleção de serviços pequenos e autônomos. 
 Cada serviço foi desenvolvido em torno de um conjunto de regras de negócio específico, e foi implementado de forma independente, o que possibilitará uma manutenção e evolução dos serviços de forma mais estáveis, permitindo uma maior flexibilidade de tecnologias, colocar alterações em produção.
- 
->> ### 📁 <a href="https://github.com/Grupo2-DSM/Api-3dsm-2022/tree/main/goodticket/back-end/Banco_dados">/back_end/Banco_dados</a>:
-Contém a estrurura de Banco de dados hospedado no site https://www.mongodb.com/pt-br 
  
  → [Voltar ao topo](#topo)
  
