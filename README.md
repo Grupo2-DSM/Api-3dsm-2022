@@ -170,6 +170,8 @@ Contém a estrurura de Banco de dados hospedado no site https://www.mongodb.com/
  <span id="Execução">
 
 ## Executando a Aplicação
+  
+Para executar a siga os passos de [Como Executar](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/Como_Executar.md).
  
  → [Voltar ao topo](#topo)
  
