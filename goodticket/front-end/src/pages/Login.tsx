@@ -1,6 +1,5 @@
-
 import illustrationImg from '../assets/images/illustrationBusiness.png';
-import logoImg from '../assets/images/Logo.svg';
+import logoImg from '../assets/images/images/Logo.svg';
 
 import { Button } from '../components/Button';
 
@@ -13,7 +12,7 @@ export function Login() {
             <aside>
                 <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas"/>
                 <strong>Crie tickets de ajuda online.</strong>
-                <p>SIM</p>
+                <p>Toda pergunta tem uma resposta.</p>
             </aside>
             <main>
                 <div className="main-content">
