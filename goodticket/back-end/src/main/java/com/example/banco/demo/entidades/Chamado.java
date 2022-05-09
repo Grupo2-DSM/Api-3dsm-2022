@@ -1,8 +1,5 @@
 package com.example.banco.demo.entidades;
-
-import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Id;
 
@@ -10,26 +7,26 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
 
-@Document("chamados")
+@Document("Chamado")
 @Data
 public class Chamado {
 	
 	@Id
-	private String id; //OK
+	private String id;
 	
-	private String titulo; //OK
+	private String titulo;
 	
-	private String descricao; //OK
+	private String descricao;
 	
-	private String tipo; //OK
+	private String tipo;
 	
-	private String equipamento; //OK
+	private String equipamento; 
 	
-	private String descri_equipamento;//OK
+	private String descri_equipamento;
 	
 	private Number num_maquina;
 	
-	private String local; //OK
+	private String local;
 	
 	private Number sala;
 	
@@ -43,6 +40,6 @@ public class Chamado {
 	
 	private String prioridade;
 	
-	private Cliente relator;
+	private Usuario relator;
 
 }

@@ -14,7 +14,6 @@ public class ChamadoSelecionador {
 			if (chamado.getId().equals(id)) {
 				selecionado = chamado;
 			}
-			System.out.print(chamado);
 		}
 		return selecionado;
 	}
