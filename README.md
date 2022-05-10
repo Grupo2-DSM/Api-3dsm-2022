@@ -1,56 +1,164 @@
 [![Generic badge](https://img.shields.io/badge/STATUS%20DA%20SPRINT-Em%20curso-orange)](https://shields.io/)
 <br id="topo">
-<h1 align="center"> Sprint 3: 25/04/2022 a 15/05/2022 </h1>
+<h1 align="center"> Sprint 2: 25/04/2022 a 15/05/2022 </h1>
 <p align="center"> 
-    <a href="#objetivos">Objetivos da Sprint</a> |
-    <a href="#wireframe">Wireframe</a> | 
-    <a href="#prototipo">Protótipo</a> | 
-    <a href="#org">Organização da Equipe</a> | 
-    <a href="#repo">Organização do Repositório</a> |
-    <a href="#entregas">Entregas</a> 
- </p>
+    <a href="#objetivos">Objetivos da Sprint</a> | 
+    <a href="#prototipo">Protótipo</a> |
+    <a href="#backlog">backlog</a> |
+    <a href="#entregas">Entregas</a> |
+    <a href="#Burndown">Burndown</a> |
+    
+    
+</p>
  
 <span id="objetivos">
 
-## 🎯 Objetivos
+## Objetivos
 
+1. Viabilizar um MVP para essa sprint
+    
+2. Organização da equipe e planejamento de processos;
+    
+ - [x] Modelar o banco de dados de Usúarios (NoSQL).
+ - [x] Programar toda a parte de funcionalidades no backend.
+ - [x] Construção da parte visual de Login, Cadastros, Visualizações e Edições de Usúarios e Chamados (frontend)
+ - [x] Integração todas as partes do projeto (B.D, Front e Back)
+   
+3. Confecção do wireframe, um rascunho do protótipo com todas as Funcionalidades;
+
+4. Desenvolvimento do protótipo.    
+    
 → [Voltar ao topo](#topo)
- 
- ## MVP - Mínimo Produto Viável
+    
+## MVP - Mínimo Produto Viável
 
 <p>O que vamos entregar?</p>
- 
-<span id="backlog">
- 
- ## Backlog
-
-<span id="prototipo">    
- 
- ## Protótipo  
-
-<span id="entregas">
- 
- ## Entregas
     
-  ### Back-end   
+ Interface com todas as funcionalidades: Login, Cadastro de Usúarios, Visualização e Edição de Usúarios, Cadastro de Chamadas, Visualização e Edição de Chamados em funcioamento.
+    
+<span id="backlog">
+
+## Backlog Sprint 2
+
+![](https:)
+    
+<span id="prototipo">
+    
+## Protótipo
+
+![](https:Tela_Cadastro.png)    
+    
+![](https:Tela_Login.png)    
+    
+![](https:Tela_Inicio.png)    
+    
+![](https:Tela_Chamado.png)
+    
+![](https:Tela_Atualizar.png)    
+    
+<span id="entregas">
+
+## Entregas
+    
+### Back-end   
+    
+- [x] 2.1 - Login
+
+Funcionalidade que ...
+
+![](https:REQUISICAO_GET_CHAMADOS.png)    
+![](https:REQUISICAO_GET_CHAMADOS_RESPOSTA.png) 
+     
+- [x] 2.2 - Cadastro Usuário: Get 
+    
+Funcionalidade que faz ...
+    
+![](https:ENTRADA_GET_POR_ID.PNG)
+![](https:GET_POR_ID_SAIDA.PNG)    
+
+- [x] 2.3 - Visualizar e Deletar Usuários 
+    
+Funcionalidade que ...
+  
+![](https:ENTRADA_POST.PNG)
  
-  ### Front-end    
+- [x] 2.4 - Editar e Deletar Chamados
+    
+Funcionalidade que ...
+  
+![](https:POST_PEDIDO.png)
+![](https:REQUISICAO_GET_CHAMADOS_RESPOSTA.png)
+    
+- [x] 2.5 - Redefinir Senha
+   
+Funcionalidade que ...
+    
+![](httpsDELETE_ENTRADA.PNG)    
+      
+- [x] 3.1 - Banco de dados: Modelagem 
+   
+Modelagem do banco de dados para Usúarios, contendo os campos ....
+    
+![](https:Sprint1-CollectionChamados.png)
+      
+- [x] 3.2 - Banco de dados: Conexão com backend
+    
+### Front-end   
+
+- [x] 2.6 - Login e Tela Cadastro de Usuário
+    
+Interface navegável por onde ...
+    
+![](https:Home.png)
+![](https:NewTicket.png)
+![](https:Tickets.png)    
+
+- [x] 2.7 - Tela Visualizar de Usuário (com função de deletar)
+   
+Interface navegável por onde ...
+    
+![](https:Home.png)
+    
+- [x] 2.8 - Tela Editar e Deletar Cadastros
+   
+Interface navegável por onde ...
+    
+![](https:Home.png)
+       
+- [x] 2.9 - Tela de Redefinir Senha
+   
+Interface navegável por onde ...
+    
+![](https:Home.png)
+   
  
-→ [Voltar ao topo](#topo)
- 
- <span id="Burndown">
+- [x] 2.10 - Conexão Frontend/backend 
+    
+O frontend integrado a todo o backend, trocando dados entre si. 
+    
+![](https:GoodTicket-Google-Chrome-2022-04-14-09-48-08.gif)   
+    
+→ [Voltar ao topo](#topo)  
+    
+<span id="Burndown">
     
 ## Burndown
-  
- ### Tarefas 
+    
+O Burndown é uma ferramenta visual do Scrum que permite verificar se o trabalho está dentro do esperado no que se refere ao cronograma, ajudando a medir a produtividade e o desempenho da equipe nos quesitos esforço, tempo e prazo de entrega.
 
+### Tarefas   
+    
 Divisão de tarefas com os respectivos responsáveis, com as datas de início e término.
-  
-  ### Horas 
+    
+![](https:Burndown_tarefas.png)  
+    
+### Horas 
     
 Acompanhamento diário das horas trabalhadas, exceto os finais de semana.
-  
-  ### Gráfico 
+    
+![](https:Burndown_ac_horas.png)  
+
+### Gráfico 
     
 No Burndown chart é possível ver a taxa de progresso da equipe na Sprint, ajudando a enxergar o seu progresso na conclusão de uma Sprint. O gráfico não aponta apenas o cumprimento dos prazos, também mostra como a equipe atuou com o fluxo de atividades. Com essa ferramenta, será possível verificar se a equipe está adiantada, dentro do cronograma ou em atraso.
     
@@ -64,6 +172,10 @@ A linha ideal do gráfico de Burndown conectar o ponto inicial ao ponto final do
     
 Essa linha apresenta o trabalho real, que no início, o trabalho restante as duas linhas são iguais, porém, à medida que o projeto progride, a linha real flutua acima e abaixo da linha ideal.
     
-Segue o Burndown da Equipe na Sprint 2:
+Segue o Burndown da Equipe na Sprint 1: 
+
+![](https:Burndown_grafico.png)  
+    
+→ [Voltar ao topo](#topo)  
+
   
-→ [Voltar ao topo](#topo)   
