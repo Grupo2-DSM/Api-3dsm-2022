@@ -1,0 +1,98 @@
+#new-ticket-content {
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        background-color: #256BA8;
+        padding: 16px;
+
+        img {
+            max-width: 129px;
+        }
+    }
+
+    main {
+        max-width: 800px;
+        margin:0 auto;
+
+        form {
+            margin-top: 85px;
+
+            .form-group-textarea {
+                input {
+                    width: 100%;
+                    margin-bottom: 16px;
+                    border: 0;
+                    padding: 16px;
+                    border-radius: 8px;
+                    background: #fefefe;
+                    box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
+                    color: #29292E;
+                }
+    
+                textarea {
+                    width: 100%;
+                    border: 0;
+                    padding: 16px;
+                    border-radius: 8px;
+                    background: #fefefe;
+                    box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
+                    resize: vertical;
+                    min-height: 130px;
+                }
+            }
+    
+            .form-input {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+
+                select {
+                    width: 384px;
+                    margin-top: 16px;
+                    border: 0;
+                    padding: 16px;
+                    border-radius: 8px;
+                    background: #fefefe;
+                    box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
+                    color: #29292E;
+                }
+                input {
+                    width: 384px;
+                    margin-top: 16px;
+                    border: 0;
+                    padding: 16px;
+                    border-radius: 8px;
+                    background: #fefefe;
+                    box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
+                    color: #29292E;
+                }
+            }
+
+            #select-options {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 16px;
+                select {
+                    width: 384px;
+                    border: 0;
+                    padding: 16px;
+                    border-radius: 8px;
+                    background: #fefefe;
+                    box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
+                    color: #29292E;
+                    font-size: 16px;
+                }
+
+                button {
+                    margin-bottom: 0;
+                    width: 384px;
+                }
+            }
+
+        }
+    }
+}
