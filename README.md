@@ -3,6 +3,7 @@
 <h1 align="center"> Sprint 2: 25/04/2022 a 15/05/2022 </h1>
 <p align="center"> 
     <a href="#objetivos">Objetivos da Sprint</a> | 
+    <a href="#mvp">MVP</a> | 
     <a href="#prototipo">Protótipo</a> |
     <a href="#backlog">backlog</a> |
     <a href="#entregas">Entregas</a> |
@@ -27,8 +28,8 @@
 3. Confecção do wireframe, um rascunho do protótipo com todas as Funcionalidades;
 
 4. Desenvolvimento do protótipo.    
-    
-→ [Voltar ao topo](#topo)
+
+<span id="mvp">
     
 ## MVP - Mínimo Produto Viável
 
@@ -41,20 +42,24 @@
 ## Backlog Sprint 2
 
 ![](https:)
+
+→ [Voltar ao topo](#topo)
     
 <span id="prototipo">
     
 ## Protótipo
 
-![](https:Tela_Cadastro.png)    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Tela_Login_nova_Sprint2.png)    
+
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Tela_Cadastro_novo_Sprint2.png)    
+     
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Tela_Inicio_novo_Sprint2.png)    
     
-![](https:Tela_Login.png)    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Tela_Chamado_novo_Sprint2.png)
     
-![](https:Tela_Inicio.png)    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Editar_Chamado_Sprint2.png)    
     
-![](https:Tela_Chamado.png)
-    
-![](https:Tela_Atualizar.png)    
+→ [Voltar ao topo](#topo)
     
 <span id="entregas">
 
@@ -138,7 +143,7 @@ O frontend integrado a todo o backend, trocando dados entre si.
     
 ![](https:GoodTicket-Google-Chrome-2022-04-14-09-48-08.gif)   
     
-→ [Voltar ao topo](#topo)  
+→ [Voltar ao topo](#topo) 
     
 <span id="Burndown">
     
