@@ -6,6 +6,7 @@
 
 <p align = "center"> GoodTicket é um Website Help Desk para suporte técnico acessível e fácil de usar para empresas.
  
+<p align = "center"> 
  | <a href="#Sobre">Sobre o Projeto</a>
  | <a href="#Briefing">Briefing</a>
  | <a href="#Entregas">Entregas</a>
