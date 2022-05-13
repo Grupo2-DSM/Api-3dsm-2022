@@ -26,7 +26,7 @@ export function Home() {
                         <FaArrowDown />
                     </div>
                     <Button>
-                        <Link to="/page/tickets">Verificar meus chamados</Link>
+                        <Link to="/page/tickets/view">Verificar meus chamados</Link>
                     </Button>
                 </div>
             </main>
