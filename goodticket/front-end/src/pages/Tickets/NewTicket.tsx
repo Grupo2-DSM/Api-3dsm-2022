@@ -4,8 +4,8 @@ import CadastradorChamado from '../../cadastradores/cadastradorChamado';
 import { Button } from '../../components/Button';
 import { Navbar } from '../../components/Navbar';
 
-import '../styles/newTicket.scss';
-import '../styles/global.scss';
+import '../../styles/newTicket.scss';
+import '../../styles/global.scss';
 
 export class NewTicket extends Component{
     private titulo!: string
