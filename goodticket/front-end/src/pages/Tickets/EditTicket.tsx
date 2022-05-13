@@ -3,8 +3,8 @@ import { Component } from 'react';
 import { Button } from '../../components/Button';
 import { Navbar } from '../../components/Navbar';
 
-import '../styles/newTicket.scss';
-import '../styles/global.scss';
+import '../../styles/newTicket.scss';
+import '../../styles/global.scss';
 
 export class EditTicket extends Component{
     render() {
