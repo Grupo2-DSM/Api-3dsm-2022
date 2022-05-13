@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { Navbar } from "../../components/Navbar";
-import '../styles/viewTickets.scss';
+import '../../styles/viewTickets.scss';
+import '../../styles/global.scss';
 
 export class ViewUsers extends Component {
     render(){
