@@ -1,7 +1,8 @@
 import { Component } from 'react';
 import { URI } from '../../enum/uri';
 import { Navbar } from "../../components/Navbar";
-import '../styles/viewTickets.scss';
+import '../../styles/viewTickets.scss';
+import '../../styles/global.scss';
 
 export class ViewTickets extends Component {
         state = {
@@ -39,7 +40,7 @@ export class ViewTickets extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                {chamados.map(chamado => (
+                               {chamados.map(chamado => (
                                     <tr key={chamado['id']}>
                                         <td>{chamado['id']}</td>
                                         <td>{chamado['titulo']}</td>
