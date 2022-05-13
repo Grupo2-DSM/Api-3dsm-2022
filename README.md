@@ -41,7 +41,7 @@
 
 ## Backlog Sprint 2
 
-![](https:)
+ <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Sprint2_.png">
 
 → [Voltar ao topo](#topo)
     
@@ -69,23 +69,32 @@
     
 - [x] 2.1 - Login
 
-Funcionalidade que ...
+Funcionalidade que permite ao usuário Logar na aplicação
 
-![](https:REQUISICAO_GET_CHAMADOS.png)    
-![](https:REQUISICAO_GET_CHAMADOS_RESPOSTA.png) 
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Get_Login.png)    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/ENTRADA_GET_LOGIN_USUARIO.png) 
+    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/RESPOSTA_GET_LOGIN_USUARIO.png) 
+    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/RESPOSTA_GET_LOGIN_USUARIO_BD.png) 
      
-- [x] 2.2 - Cadastro Usuário: Get 
+- [x] 2.2 - Cadastro Usuário
     
-Funcionalidade que faz ...
+Funcionalidade que possibilita ao Administrador cadastrar um novo usuário
     
-![](https:ENTRADA_GET_POR_ID.PNG)
-![](https:GET_POR_ID_SAIDA.PNG)    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/GET_CADASTRO.png)  
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/ENTRADA_POST_CARASTRAR_USUARIO.png) 
+    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/RESPOSTA_POST_CARASTRAR_USUARIO.png) 
+    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/CONFIRMA%C3%87%C3%83O_CADASTRO_BD.png)    
 
 - [x] 2.3 - Visualizar e Deletar Usuários 
     
-Funcionalidade que ...
+Funcionalidade que permite visualizar todos os usuarios cadastrados e deletalos caso necessário
   
-![](https:ENTRADA_POST.PNG)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Get_Usuarios.png )  
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/REQUISICAO_GET_USUARIOS_RESPOSTA.png) 
  
 - [x] 2.4 - Editar e Deletar Chamados
     
@@ -102,9 +111,9 @@ Funcionalidade que ...
       
 - [x] 3.1 - Banco de dados: Modelagem 
    
-Modelagem do banco de dados para Usúarios, contendo os campos ....
+Modelagem do banco de dados para Usúarios, contendo os campos id, nome, email, departamento, cargo, senha e usuario
     
-![](https:Sprint1-CollectionChamados.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/BD_usuarios.png)
       
 - [x] 3.2 - Banco de dados: Conexão com backend
     
