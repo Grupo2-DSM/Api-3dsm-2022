@@ -1,4 +1,4 @@
-[![Generic badge](https://img.shields.io/badge/STATUS%20DA%20SPRINT-Em%20curso-orange)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/STATUS%20DA%20SPRINT-CONCLUIDA-green)](https://shields.io/)
 <br id="topo">
 <h1 align="center"> Sprint 2: 25/04/2022 a 15/05/2022 </h1>
 <p align="center"> 
@@ -20,14 +20,14 @@
     
 2. Organização da equipe e planejamento de processos;
     
- - [x] Modelar o banco de dados de Usúarios (NoSQL).
+ - [x] Modelar o banco de dados de Usuários (NoSQL).
  - [x] Programar toda a parte de funcionalidades no backend.
- - [x] Construção da parte visual de Login, Cadastros, Visualizações e Edições de Usúarios e Chamados (frontend)
+ - [x] Construção da parte visual de Login, Cadastros, Visualizações e Edições de Usuários e Chamados (frontend)
  - [x] Integração todas as partes do projeto (B.D, Front e Back)
    
 3. Confecção do wireframe, um rascunho do protótipo com todas as Funcionalidades;
 
-4. Desenvolvimento do protótipo.    
+4. Desenvolvimento da aplicação web.    
 
 <span id="mvp">
     
@@ -35,7 +35,7 @@
 
 <p>O que vamos entregar?</p>
     
- Interface com todas as funcionalidades: Login, Cadastro de Usúarios, Visualização e Edição de Usúarios, Cadastro de Chamadas, Visualização e Edição de Chamados em funcioamento.
+ Interface com todas as funcionalidades: Login, Cadastro de Usuários, Visualização e Edição de Usuários, Cadastro de Chamadas, Visualização e Edição de Chamados em funcionamento.
     
 <span id="backlog">
 
@@ -91,64 +91,74 @@ Funcionalidade que possibilita ao Administrador cadastrar um novo usuário
 
 - [x] 2.3 - Visualizar e Deletar Usuários 
     
-Funcionalidade que permite visualizar todos os usuarios cadastrados e deletalos caso necessário
+Funcionalidade que permite visualizar todos os usuários cadastrados e deletá-los caso necessário
   
 ![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Get_Usuarios.png )  
 ![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/REQUISICAO_GET_USUARIOS_RESPOSTA.png) 
- 
-- [x] 2.4 - Editar e Deletar Chamados
     
-Funcionalidade que ...
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/DELETE_USUARIO.png) 
+    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/ENTRADA_DELETE_USUARIO.png) 
+    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/RESPOSTA_DELETE_USUARIO.png) 
+
+- [x] 2.4 - Atualizar e Deletar Chamados
+    
+Funcionalidade que permite atualizar um chamado em aberto e deletar caso o usuário ache necessário.
   
-![](https:POST_PEDIDO.png)
-![](https:REQUISICAO_GET_CHAMADOS_RESPOSTA.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/ENTRADA_UPDATE_CHAMADO.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/RESPOSTA_UPDATE_CHAMADO.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/DELETE_ENTRADA.PNG)  
     
 - [x] 2.5 - Redefinir Senha
    
-Funcionalidade que ...
+Funcionalidade em que o usuário restabelece uma nova senha da cadastrada pelo Administrador 
     
-![](httpsDELETE_ENTRADA.PNG)    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/ENTRADA_REDEFINIR_SENHA.png)    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/RESPOSTA_REDEFINIR_SENHA.png)
       
 - [x] 3.1 - Banco de dados: Modelagem 
    
-Modelagem do banco de dados para Usúarios, contendo os campos id, nome, email, departamento, cargo, senha e usuario
+Modelagem do banco de dados para Usuários, contendo os campos id, nome, e-mail, departamento, cargo, senha e usuário
     
 ![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/BD_usuarios.png)
       
 - [x] 3.2 - Banco de dados: Conexão com backend
     
+→ [Voltar ao topo](#topo) 
+    
 ### Front-end   
 
-- [x] 2.6 - Login e Tela Cadastro de Usuário
+- [x] 2.6 - Login e Tela Home
     
-Interface navegável por onde ...
+Interface navegável por onde o usuário irá fazer o login e tela inicial 
     
-![](https:Home.png)
-![](https:NewTicket.png)
-![](https:Tickets.png)    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/Entrega_Login_Sprint2.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/Entrega_HOME_Sprint2.png)
 
-- [x] 2.7 - Tela Visualizar de Usuário (com função de deletar)
+- [x] 2.7 - Tela Cadastro E Visualizar de Usuário
    
-Interface navegável por onde ...
+Interface navegável por onde o Administrador irá cadastrar e visualizar os usuários
     
-![](https:Home.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/Entrega_CADASTRO_USUARIO_Sprint2.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/Entrega_VISUALIZAR_USUARIOS_Sprint2.png)
     
-- [x] 2.8 - Tela Editar e Deletar Cadastros
+- [x] 2.8 - Tela Atualização do Cadastro
    
-Interface navegável por onde ...
+Interface navegável por onde o chamado é atualizado
     
-![](https:Home.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/Entrega_ATUALIZAR_CHAMADO_Sprint2.png)
        
 - [x] 2.9 - Tela de Redefinir Senha
    
-Interface navegável por onde ...
+Interface navegável por onde o usuário restabelece uma nova senha da cadastrada pelo Administrador 
     
-![](https:Home.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/Entrega_REDEFINIR_SENHA_Sprint2.png)
    
  
 - [x] 2.10 - Conexão Frontend/backend 
     
-O frontend integrado a todo o backend, trocando dados entre si. 
+O frontend integrado a todo o backend, trocando dados entre si com todas as funcionalidades  
     
 ![](https:GoodTicket-Google-Chrome-2022-04-14-09-48-08.gif)   
     
@@ -191,5 +201,6 @@ Segue o Burndown da Equipe na Sprint 1:
 ![](https:Burndown_grafico.png)  
     
 → [Voltar ao topo](#topo)  
+
 
   
