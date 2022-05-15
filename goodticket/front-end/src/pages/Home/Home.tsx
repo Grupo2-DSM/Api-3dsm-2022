@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import { FaArrowDown } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 import { Button } from '../../components/Button';
 import { Navbar } from '../../components/Navbar';
@@ -8,25 +7,27 @@ import '../../styles/home.scss';
 import '../../styles/global.scss';
 
 export function Home() {
+    const navigate = useNavigate();
+
     return (
         <div id="home-content">
             <Navbar />
             <main>
                 <div className='main-content'>
-                    <div className="main-title">
-                        <p>Seja bem vindo, para abrir um chamado, clique aqui em baixo :)</p>
-                        <FaArrowDown />
-                    </div>
-                    <Button >
-                        <Link to="/page/tickets/new">Abrir Chamado</Link>
+                    <Button onClick={() => navigate('/page/tickets/new')}>
+                        Abrir Chamado
                     </Button>
 
-                    <div className="main-title">
-                        <p>Se já possuir um chamado, clique aqui em baixo :)</p>
-                        <FaArrowDown />
-                    </div>
-                    <Button>
-                        <Link to="/page/tickets/view">Verificar meus chamados</Link>
+                    <Button onClick={() => navigate('/page/tickets/view')}>
+                        Verificar meus chamados
+                    </Button>
+
+                    <Button onClick={() => navigate('/page/register')}>
+                        Criar usuários
+                    </Button>
+
+                    <Button onClick={() => navigate('/page/admin/users/view')}>
+                        Visualizar usuários na aplicação
                     </Button>
                 </div>
             </main>

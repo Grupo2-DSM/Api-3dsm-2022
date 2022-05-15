@@ -5,7 +5,7 @@ import { Login } from './pages/Login/Login';
 import { NewPassword } from './pages/Login/NewPassword';
 import { NewTicket } from './pages/Tickets/NewTicket';
 import { Password } from './pages/Login/Password';
-import { Register } from './pages/Register/Register';
+import { UserRegister } from './pages/Register/Register';
 import { ViewTickets } from './pages/Tickets/ViewTickets';
 import { ViewUsers } from './pages/Admin/ViewUsers';
 import { EditTicket } from './pages/Tickets/EditTicket';
@@ -21,8 +21,8 @@ export function PathRoutes() {
             <Route path="/page/tickets/new" element={<NewTicket />} />
             <Route path="/page/tickets/view" element={<ViewTickets />} />
             <Route path="/page/admin/users/view" element={<ViewUsers />} />
-            <Route path="/page/edit/ticket" element={<EditTicket />} />
-            <Route path="/page/register" element={<Register />} />
+            <Route path="/page/edit/ticket" element={<EditTicket id={''} titulo={''} descricao={''} local={''} tipo={''} equipamento={''} descri_equipamento={''} num_maquina={0} sala={0} prioridade={''} />} />
+            <Route path="/page/register" element={<UserRegister />} />
         </Routes>
     )
 };

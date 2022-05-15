@@ -1,10 +1,25 @@
+import { URI } from '../../enum/uri';
+
 import { Component } from 'react';
 import { Navbar } from "../../components/Navbar";
+
 import '../../styles/viewTickets.scss';
 import '../../styles/global.scss';
 
+
 export class ViewUsers extends Component {
+    state = {
+        usuarios: []
+    }
+
+    async componentDidMount(){
+        const resposta = await fetch(URI.USUARIOS)
+        const body = await resposta.json()
+        this.setState({usuarios:body})
+    }
+
     render(){
+        const {usuarios} = this.state
         return (
             <div>
                 <Navbar />
@@ -22,19 +37,21 @@ export class ViewUsers extends Component {
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Nome</th>
-                                    <th>Email</th>
-                                    <th>Cargo</th>
-                                    <th>Setor</th>
+                                    <th><span>Nome</span></th>
+                                    <th><span>Email</span></th>
+                                    <th><span>Cargo</span></th>
+                                    <th><span>Setor</span></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                    <tr>
-                                        <td>Vinicius</td>
-                                        <td>vinicius@gmail.com</td>
-                                        <td>Administrador</td>
-                                        <td>RH</td>
+                            {usuarios.map(usuario => (
+                                    <tr key={usuario['id']}>
+                                        <td><span>{usuario['nome']}</span></td>
+                                        <td><span>{usuario['email']}</span></td>
+                                        <td><span>{usuario['cargo']}</span></td>
+                                        <td><span>{usuario['setor']}</span></td>
                                     </tr>
+                                ))}
                             </tbody>
                         </table>
                     </main>

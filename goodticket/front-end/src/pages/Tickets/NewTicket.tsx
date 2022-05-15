@@ -89,6 +89,8 @@ export class NewTicket extends Component{
         }
         this.cadastrarChamado(chamado)
         evento.target.reset()
+        window.alert("Chamado criado com sucesso.")
+        window.location.href = '/page/home'
     }
 
     render() {

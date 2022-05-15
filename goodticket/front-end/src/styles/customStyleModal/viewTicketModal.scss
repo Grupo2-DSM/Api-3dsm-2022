@@ -1,0 +1,64 @@
+.customOverlay {
+    background: rgba(5,2,6, 0.8);
+}
+
+.customModal{
+    background: #f2f2f2!important;
+    border-radius: 8px;
+}
+
+#modal-content {
+    padding: 64px;
+    .id-ticket{
+        width: 100%;
+        background: #fefefe;
+        padding: 16px;
+        margin-bottom: 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
+    }
+
+    input {
+        width: 100%;
+        padding: 16px;
+        margin-bottom: 16px;
+        border: none;
+        border-radius: 8px;
+        background: #fefefe;
+        box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
+        color: #29292E;
+    }
+
+    textarea {
+        width: 100%;
+        border: 0;
+        padding: 16px;
+        border-radius: 8px;
+        background: #fefefe;
+        box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
+        resize: vertical;
+        min-height: 130px;
+    }
+
+    select {
+        width: 100%;
+        margin-top: 16px;
+        border: 0;
+        padding: 16px;
+        border-radius: 8px;
+        background: #fefefe;
+        box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
+        color: #29292E;
+    }
+
+    .margin-left{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    button {
+        margin-top: 16px;
+        display: flex;
+        width: 159px;
+    }
+}
