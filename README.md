@@ -160,7 +160,10 @@ Interface navegável por onde o usuário restabelece uma nova senha da cadastrad
     
 O frontend integrado a todo o backend, trocando dados entre si com todas as funcionalidades  
     
-![](https:GoodTicket-Google-Chrome-2022-04-14-09-48-08.gif)   
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/LOGIN.gif)  
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/TELA-HOME.gif)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/CRIAR-E-VISUALIZAR-USU%C3%81RIOS.gif)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/CRIAR-CHAMADO_-VISUALIZAR-CHAMADO_-EDITAR-CHAMADO.gif)
     
 → [Voltar ao topo](#topo) 
     
@@ -174,13 +177,13 @@ O Burndown é uma ferramenta visual do Scrum que permite verificar se o trabalho
     
 Divisão de tarefas com os respectivos responsáveis, com as datas de início e término.
     
-![](https:Burndown_tarefas.png)  
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/Burndown_tarefas_sprint2.png)  
     
 ### Horas 
     
 Acompanhamento diário das horas trabalhadas, exceto os finais de semana.
     
-![](https:Burndown_ac_horas.png)  
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/Burndown_ac_horas_sprint2.png)  
 
 ### Gráfico 
     
@@ -198,7 +201,7 @@ Essa linha apresenta o trabalho real, que no início, o trabalho restante as dua
     
 Segue o Burndown da Equipe na Sprint 1: 
 
-![](https:Burndown_grafico.png)  
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/Burndown_grafico_sprint2.png)  
     
 → [Voltar ao topo](#topo)  
 
