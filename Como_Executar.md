@@ -68,4 +68,4 @@ $ yarn start
 
 A página irá abrir automaticamente pela rota http://localhost:3000 conforme imagem:
 
-![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Tela_Inicio_porta3000.png) 
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/Entrega_Login_Sprint2.png) 
