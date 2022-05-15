@@ -199,7 +199,7 @@ A linha ideal do gráfico de Burndown conectar o ponto inicial ao ponto final do
     
 Essa linha apresenta o trabalho real, que no início, o trabalho restante as duas linhas são iguais, porém, à medida que o projeto progride, a linha real flutua acima e abaixo da linha ideal.
     
-Segue o Burndown da Equipe na Sprint 1: 
+Segue o Burndown da Equipe na Sprint 2: 
 
 ![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-2/img/Burndown_grafico_sprint2.png)  
     
