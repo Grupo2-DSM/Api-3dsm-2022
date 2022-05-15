@@ -35,6 +35,9 @@ public class ChamadoAtualizador {
 		if(!verificador.verificar(atualizacao.getResolucao())) {
 			chamado.setResolucao(atualizacao.getResolucao());
 		}
+		if(!verificador.verificar(atualizacao.getPrioridade())) {
+			chamado.setPrioridade(atualizacao.getPrioridade());
+		}
 		if(!verificador.verificar(atualizacao.getStatus())) {
 			chamado.setStatus(atualizacao.getStatus());
 		}

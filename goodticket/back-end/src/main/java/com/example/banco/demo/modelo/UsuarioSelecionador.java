@@ -8,10 +8,10 @@ import com.example.banco.demo.entidades.Usuario;
 
 @Component
 public class UsuarioSelecionador {
-	public Usuario selecionar(List<Usuario> usuarios, String id) {
+	public Usuario selecionar(List<Usuario> usuarios, String email) {
 		Usuario selecionado = null;
 		for (Usuario usuario : usuarios) {
-			if (usuario.getId().equals(id)) {
+			if (usuario.getEmail().equals(email)) {
 				selecionado = usuario;
 			}
 		}

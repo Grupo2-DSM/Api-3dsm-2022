@@ -75,7 +75,7 @@ public class UsuarioControle {
 		List<Usuario> usuarios = repositorio.findAll();
 		Usuario user = selecionador.selecionar(usuarios, usuario.getEmail());
 		HttpStatus status = HttpStatus.CONFLICT;
-		if (usuario.getId() == null & user == null) {
+		if (usuario.getId() == null && user == null) {
 			usuario.setSenha(encoder.encode(usuario.getSenha()));
 			repositorio.save(usuario);
 			status = HttpStatus.CREATED;
@@ -83,16 +83,18 @@ public class UsuarioControle {
 		return new ResponseEntity<>(status);
 	}
 	
-	@PostMapping("/login")
-	public ResponseEntity<Boolean> login(@RequestBody Usuario user){
+	@PostMapping("/usuario/login")
+	public ResponseEntity<Boolean> login(@RequestBody Usuario usuario){
 		List<Usuario> usuarios = repositorio.findAll();
-		Usuario usuario = selecionador.selecionar(usuarios, user.getEmail());
-		if (usuario == null) {
+		Usuario user = selecionador.selecionar(usuarios, usuario.getEmail());
+		if (user == null) {
 			return ResponseEntity.status(HttpStatus.FORBIDDEN).body(false);
 		}
 		boolean valid = false;
-		valid = encoder.matches(user.getSenha(), usuario.getSenha());
+		valid = encoder.matches(usuario.getSenha(), user.getSenha());
 		HttpStatus status = (valid) ? HttpStatus.OK : HttpStatus.FORBIDDEN;
+		usuario = user;
+		System.out.println(valid);
 		return ResponseEntity.status(status).body(valid);
 	}
 	
@@ -100,7 +102,7 @@ public class UsuarioControle {
 	public ResponseEntity<?> redefinirSenha(@RequestBody Usuario atualizacao){
 		HttpStatus status = HttpStatus.CONFLICT;
 		List<Usuario> usuarios = repositorio.findAll();
-		Usuario selecionado = selecionador.selecionar(usuarios, atualizacao.getId());
+		Usuario selecionado = selecionador.selecionar(usuarios, atualizacao.getEmail());
 		if (selecionado != null) {
 			UsuarioAtualizador atualizador = new UsuarioAtualizador();
 			atualizador.atualizarDados(selecionado, atualizacao);
@@ -118,7 +120,7 @@ public class UsuarioControle {
 		List<Usuario> usuarios = repositorio.findAll();
 		Usuario selecionado = null;
 		for (Usuario usuario : usuarios) {
-			if (usuario.getId().equals(delecao.getId())) {
+			if (usuario.getEmail().equals(delecao.getEmail())) {
 				selecionado = usuario;
 			}
 		}

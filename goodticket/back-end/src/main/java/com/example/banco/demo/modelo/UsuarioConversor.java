@@ -10,7 +10,18 @@ public class UsuarioConversor {
 	public UsuarioModelo converter(Usuario usuario, UsuarioModelo usuarioModelo) {
 		usuarioModelo.setNome(usuario.getNome());
 		usuarioModelo.setSetor(usuario.getSetor());
-		usuarioModelo.setCargo(usuario.getCargo());
+		if (usuario.getCargo() == "ROLE_ADMIN") {
+			usuarioModelo.setCargo("Admin");
+		} 
+		if (usuario.getCargo() == "ROLE_SUPPORT") {
+			usuarioModelo.setCargo("Support");
+		}
+		if (usuario.getCargo() == "ROLE_USER") {
+			usuarioModelo.setCargo("User");
+		}
+		else {
+			usuarioModelo.setCargo(usuario.getCargo());
+		}
 		usuarioModelo.setEmail(usuario.getEmail());
 		return usuarioModelo;
 	}
