@@ -14,21 +14,23 @@ import axiosLogin from "../../login/axiosLogin";
 import { URI } from "../../enum/uri";
 import Modal from "react-responsive-modal";
 
-export function ViewTickets(){
-    const [open, setOpen] = useState(false);
-    const onOpenModal = () => setOpen(true);
-    const onCloseModal = () => setOpen(false);
-    const navigate = useNavigate();
-    const [chamados, setChamados] = useState([])
-    const [titulo, setTitulo] = useState('')
-    const [descricao, setDescricao] = useState('')
-    const [prioridade, setPrioridade] = useState('')
-    const [id, setId] = useState('')
+export function SolutionsTickets() {
+        const [open, setOpen] = useState(false);
+        const onOpenModal = () => setOpen(true);
+        const onCloseModal = () => setOpen(false);
+        const navigate = useNavigate();
+        const [chamados, setChamados] = useState([])
+        const [titulo, setTitulo] = useState('')
+        const [descricao, setDescricao] = useState('')
+        const [prioridade, setPrioridade] = useState('')
+        const [id, setId] = useState('')
 
         const handleGetAll = async () =>{
-            const resposta =  await axiosLogin.get(URI.CHAMADOS)
+            const resposta =  await axiosLogin.get(URI.CHAMADOS_FECHADOS)
             return resposta.data
         }
+
+     
 
         useEffect(() => {
             const getAllTickets = async () => {
@@ -47,7 +49,7 @@ export function ViewTickets(){
             );
         }, [busca, chamados]);
 
-        
+
         return (
             <div>
                <Navbar />
@@ -86,13 +88,8 @@ export function ViewTickets(){
                             <input type="text" 
                             placeholder="Procure pelo nome do chamado"
                             value={busca}
-                            onChange={(ev) => setBusca(ev.target.value)} 
-                            />
-                            <select>
-                                <option selected>Selecione um filtro</option>
-                                <option>Em andamento</option>
-                                <option>Finalizado</option>
-                            </select>
+                            onChange={(ev) => setBusca(ev.target.value)}
+                             />
                         </div>
                         <table>
                             <thead>
@@ -100,16 +97,17 @@ export function ViewTickets(){
                                     <th><span>Id</span></th>
                                     <th><span>Titulo</span></th>
                                     <th><span>Equipamento</span></th>
-                                    <th><span>Status</span></th>
+                                    <th><span>Prioridade</span></th>
                                 </tr>
                             </thead>
+                        
                             <tbody>
                                 {chamadosFiltrados.map((chamado: any) => (
                                     <tr key={chamado['id']} onClick={onOpenModal} onClickCapture={() => {setId(chamado['id']); setTitulo(chamado['titulo']); setDescricao(chamado['descricao']); setPrioridade(chamado['prioridade'])}}>
                                         <td><span>{chamado['id']}</span></td>
                                         <td><span>{chamado['titulo']}</span></td>
                                         <td><span>{chamado['equipamento']}</span></td>
-                                        <td><span>{chamado['status']}</span></td>
+                                        <td><span>{chamado['prioridade']}</span></td>
                                     </tr>
                                 ))}
                             </tbody>

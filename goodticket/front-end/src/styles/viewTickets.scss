@@ -2,9 +2,16 @@
     main {
         margin-top: 43px;
 
+
+        .titleSolutions {
+            text-align: center;
+            margin: 50px 0px;
+            font-size: 28px;
+        }
+
         .main-search-area {
             display: flex;  
-            justify-content: space-between;
+            justify-content: center;
             max-width: 1200px;
             margin: 0 auto;
             
@@ -28,6 +35,10 @@
                 background: #fefefe;
                 box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
                 color: #29292E;
+            }
+
+            h1{
+                text-align: center;
             }
         }
 

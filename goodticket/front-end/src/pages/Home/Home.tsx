@@ -29,6 +29,9 @@ export function Home() {
                     <Button onClick={() => navigate('/page/admin/users/view')}>
                         Visualizar usuários na aplicação
                     </Button>
+                    <Button onClick={() => navigate('/page/tickets/solutions')}>
+                        Sistema de Soluções
+                    </Button>
                 </div>
             </main>
         </div>
