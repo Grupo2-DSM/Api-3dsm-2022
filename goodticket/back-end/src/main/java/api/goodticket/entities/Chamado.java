@@ -31,7 +31,7 @@ public class Chamado {
 	
 	private Number sala;
 	
-	private Date datahora;
+	private String datahora;
 	
 	private String status;
 	

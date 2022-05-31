@@ -11,6 +11,7 @@ public class UsuarioConversor {
 		usuarioModelo.setNome(usuario.getNome());
 		usuarioModelo.setSetor(usuario.getSetor());
 		usuarioModelo.setCargos(usuario.getCargos());
+		usuarioModelo.setEmail(usuario.getCredencial().getEmail());
 		return usuarioModelo;
 	}
 }

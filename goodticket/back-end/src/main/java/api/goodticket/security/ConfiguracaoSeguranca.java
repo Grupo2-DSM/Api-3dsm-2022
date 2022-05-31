@@ -1,8 +1,11 @@
 package api.goodticket.security;
 
+import java.util.Arrays;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -30,7 +33,8 @@ public class ConfiguracaoSeguranca extends WebSecurityConfigurerAdapter{
 	@Autowired
 	private JWTGenerator JwtTokenGenerator;
 	
-	private static final String[] rotasPublicas = {"/chamados", "/redefinirSenha", "/chamado/atualizar", "/", "/chamados/fechados"};
+	private static final String[] rotasPublicas = {"/chamados", "/redefinirSenha", "/chamado/atualizar", "/", "/chamados/fechados",
+			"/chamado/inserir", "/chamados/abertos", "/usuario/autenticar", "/chamado/solucao", "/chamado/comentario", "/usuario/cadastro", "/chamados/abertos-em-andamento"};
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
@@ -38,7 +42,6 @@ public class ConfiguracaoSeguranca extends WebSecurityConfigurerAdapter{
 		
 		http.authorizeHttpRequests().antMatchers(rotasPublicas).permitAll()
 		.anyRequest().authenticated();
-		
 		http.addFilter(new JWTFilterAuthenticate(authenticationManager(), JwtTokenGenerator));
 		http.addFilter(new JWTFilterAuthorize(authenticationManager(), JwtTokenGenerator, service));
 		
@@ -51,9 +54,17 @@ public class ConfiguracaoSeguranca extends WebSecurityConfigurerAdapter{
 	}
 	
 	@Bean
-	CorsConfigurationSource corsConfiguratiionSource() {
-		UrlBasedCorsConfigurationSource fonte = new UrlBasedCorsConfigurationSource();
-		fonte.registerCorsConfiguration("/**", new CorsConfiguration().applyPermitDefaultValues());
-		return fonte;
+	CorsConfigurationSource corsConfigurationSource() {
+		CorsConfiguration configuration = new CorsConfiguration().applyPermitDefaultValues();
+		configuration.setAllowedMethods(Arrays.asList("POST", "GET", "PUT", "DELETE", "OPTIONS"));
+		final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		source.registerCorsConfiguration("/**", configuration);
+		return source;
 	}
+	
+	@Bean
+	@Override
+	protected AuthenticationManager authenticationManager() throws Exception {
+        return super.authenticationManager();
+    }
 }

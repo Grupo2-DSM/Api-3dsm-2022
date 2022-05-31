@@ -4,10 +4,10 @@ import api.goodticket.entities.Usuario;
 
 public class UsuarioVerificadorNulo {
 	
-	public boolean verificar(Usuario usuario) {
+	public boolean verificar(UsuarioModelo usuarioModelo) {
 		boolean nulo = true;
-		if (!(usuario == null)) {
-			if (!usuario.getId().isBlank()) {
+		if (!(usuarioModelo == null)) {
+			if (!usuarioModelo.getEmail().isBlank()) {
 				nulo = false;
 			}
 		}

@@ -8,7 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,11 +26,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import api.goodticket.dto.UsuarioDTO;
 import api.goodticket.editors.UsuarioAtualizador;
+import api.goodticket.entities.Credencial;
 import api.goodticket.entities.Usuario;
+import api.goodticket.jwt.JWTGenerator;
+import api.goodticket.models.LoginModel;
+import api.goodticket.models.NewPasswordModel;
 import api.goodticket.models.UsuarioConversor;
 import api.goodticket.models.UsuarioModelo;
 import api.goodticket.selectors.UsuarioSelecionador;
+import io.jsonwebtoken.Jwts;
 import api.goodticket.repositories.UsuarioRepositorio;
+import api.goodticket.security.TokenDTO;
 
 @CrossOrigin
 @RestController
@@ -37,6 +49,10 @@ public class UsuarioControle {
 	private PasswordEncoder encoder;
 	@Autowired
 	private UsuarioConversor conversor;
+	@Autowired
+	private AuthenticationManager authenticationManager;
+	@Autowired
+	private JWTGenerator jwtTokenGenerator;
 	
 	@GetMapping("/usuario/{id}")
 	public ResponseEntity<UsuarioModelo> obterUsuario(@PathVariable String id){
@@ -93,11 +109,11 @@ public class UsuarioControle {
 	}
 	
 	@PutMapping("/redefinirSenha")
-	public ResponseEntity<?> redefinirSenha(@RequestBody Usuario atualizacao){
+	public ResponseEntity<?> redefinirSenha(@RequestBody NewPasswordModel atualizacao){
 		HttpStatus status = HttpStatus.CONFLICT;
 		List<Usuario> usuarios = repositorio.findAll();
-		Usuario selecionado = selecionador.selecionar(usuarios, atualizacao.getCredencial().getEmail());
-		if (selecionado != null) {
+		Usuario selecionado = selecionador.selecionar(usuarios, atualizacao.getEmail());
+		if (selecionado != null && atualizacao.getSenha().equals(atualizacao.getConfirmarSenha())) {
 			UsuarioAtualizador atualizador = new UsuarioAtualizador();
 			atualizador.atualizarDados(selecionado, atualizacao);
 			selecionado.getCredencial().setSenha(encoder.encode(selecionado.getCredencial().getSenha()));
@@ -125,5 +141,22 @@ public class UsuarioControle {
 			status = HttpStatus.OK;
 		}
 		return new ResponseEntity<>(status);
+	}
+	
+	@PostMapping("/usuario/autenticar")
+	public ResponseEntity<TokenDTO> autenticar(@RequestBody LoginModel login){
+		List<Usuario> usuarios = repositorio.findAll();
+		UsernamePasswordAuthenticationToken payloadLogin = login.converter();
+		try {
+			Authentication authentication = authenticationManager.authenticate(payloadLogin);
+			
+			Usuario usuario = selecionador.selecionar(usuarios, authentication.getName());
+			
+			String token = jwtTokenGenerator.generateToken(authentication.getName());
+			
+			return ResponseEntity.ok(new TokenDTO(token, "Bearer ", usuario));
+		} catch(AuthenticationException e) {
+			return new ResponseEntity<TokenDTO>(HttpStatus.UNAUTHORIZED);
+		}
 	}
 }

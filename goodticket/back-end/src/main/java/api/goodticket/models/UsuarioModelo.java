@@ -12,5 +12,7 @@ public class UsuarioModelo {
 	
 	private String setor;
 	
+	private String email;
+	
 	private List<Cargo> cargos = new ArrayList<>();
 }
