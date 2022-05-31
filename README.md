@@ -59,7 +59,7 @@ Entregas serão realizadas nas seguintes datas:
 :---------: | :------:    | :-------:          | :-------:
 01          | 14/04/2021  | [![Generic badge](https://img.shields.io/badge/-Concluído-green)](https://shields.io/)  | <a href="https://github.com/Grupo2-DSM/Api-3dsm-2022/tree/Sprint-1">Sprint 1</a> |
 02          | 15/05/2021  | [![Generic badge](https://img.shields.io/badge/-Concluído-green)](https://shields.io/)  | <a href="https://github.com/Grupo2-DSM/Api-3dsm-2022/tree/Sprint-2">Sprint 2</a>
-03          | 05/06/2021  | [![Generic badge](https://img.shields.io/badge/-Em%20curso-orange)](https://shields.io/)  | [Acessar]
+03          | 05/06/2021  | [![Generic badge](https://img.shields.io/badge/-Em%20curso-orange)](https://shields.io/)  | <a href="https://github.com/Grupo2-DSM/Api-3dsm-2022/tree/Sprint-3">Sprint 3</a>
  
  → [Voltar ao topo](#topo)
   
