@@ -42,6 +42,7 @@ public class ConfiguracaoSeguranca extends WebSecurityConfigurerAdapter{
 		
 		http.authorizeHttpRequests().antMatchers(rotasPublicas).permitAll()
 		.anyRequest().authenticated();
+		
 		http.addFilter(new JWTFilterAuthenticate(authenticationManager(), JwtTokenGenerator));
 		http.addFilter(new JWTFilterAuthorize(authenticationManager(), JwtTokenGenerator, service));
 		
