@@ -16,18 +16,19 @@
 
 ## Objetivos
 
-1. Viabilizar um MVP para essa sprint
+1. Viabilizar um Produto Final para essa sprint
     
 2. Organização da equipe e planejamento de processos;
     
- - [x] .
- - [x] .
- - [x] .
- - [x] .
-   
-3. Confecção do ;
-
-4. Finalização da aplicação web.    
+ - [x] Autenticação e Autorização.
+ - [x] Acompanhamento de chamado.
+ - [x] Banco de Soluções.
+ - [x] Responsividade.
+ - [x] Relatório baseado na aplicação Power BI.
+ - [x] Documentação do código.
+ - [x] Manual do Usuário.
+    
+3. Hospedagem da aplicação web.    
 
 <span id="mvp">
     
@@ -35,24 +36,14 @@
 
 <p>O que vamos entregar?</p>
     
- Interface.
+ Interface navegável responsiva com 3 perfis de acesso, acompanhamento e fechamento dos chamados e Banco de Soluções, Analise de Indicadores e Documentação.
     
 <span id="backlog">
 
 ## Backlog Sprint 3
 
- <img src = "">
-
-→ [Voltar ao topo](#topo)
-    
-<span id="prototipo">
-    
-## Protótipo
-
-![]()    
-
-![]()    
-       
+ <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Sprint3.png">
+   
     
 → [Voltar ao topo](#topo)
     
@@ -62,78 +53,84 @@
     
 ### Back-end   
     
-- [x] 2.1 - XXX
+- [x] 2.1 - Autenticação e Autorização.
 
-Funcionalidade que 
+Funcionalidades em que: a autenticação é responsável por pegar as identidades dos usuários e verificá-las para fornecer o acesso ao sistema e a autorização é certificação que o usuário tem para acessar determinados recursos do sistema.
 
-![]()    
-![]() 
+![](https://)  
+![](https://) 
+ 
+ 
+- [x] 2.2 - Acompanhamento de chamado.
     
-
-     
-- [x] 2.2 - XXX
-    
-Funcionalidade que 
+Funcionalidade que permite o usuário e o suporte de visualizar e comentar o chamado, além de o suporte receber o chamado para tratar, acrescentar solução e fechar o chamado.
     
 ![](https://)  
-![](https://)   
-
-- [x] 2.3 - XXX 
+![](https://) 
     
-Funcionalidade que 
+
+- [x] 2.3 - Banco de Soluções.
+    
+Funcionalidade que permite aos usuários e suportes a perquisa de soluções existente de chamados anteriores para evitar o retrabalho.
   
 ![](https://)  
 ![](https://) 
 
-- [x] 2.4 - XXX
     
-Funcionalidade que 
+- [x] 2.4 - Documentação do código.
+    
+Funcionalidade elaborada em Swagger em que toda a documentação do código da aplicação e decifrado, permitido a manutenção e ampliação da Aplicação.
   
 ![](https://)
 ![](https://)
-    
-- [x] 2.5 - XXX
-   
-Funcionalidade  
-    
-![](https://)    
-![](https://)
+
     
 ### Front-end   
 
-- [x] 2.6 - XXX
+- [x] 2.5 - Acompanhamento de chamado.
     
-Interface 
+Interface que permite o usuário e o suporte de visualizar e comentar o chamado, além de o suporte receber o chamado para tratar, acrescentar solução e fechar o chamado.
     
 ![](https://)
 ![](https://)
 
-- [x] 2.7 - XXX
+    
+- [x] 2.6 - Banco de Soluções.
    
-Interface 
+Interface que permite aos usuários e suportes a perquisa de soluções existente de chamados anteriores para evitar o retrabalho.
     
 ![](https://)
 ![](https://)
     
-- [x] 2.8 - XXX
+    
+- [x] 2.7 - Responsividade.
    
-Interface 
+Interface que permite Usuário/Suporte/Administrador acessar a aplicação em dispositivos mobile e tablets, além de desktops. 
     
 ![](https://)
-       
-- [x] 2.9 - XXX
+![](https://)
+    
+    
+- [x] 2.8 - Relatório baseado na aplicação Power BI.
    
-Interface 
+Interface web de Serviço de Análise de Negócio alimentada pelos dados gerados pela aplicação GoodTicket, relacionando-os e possibilitando a geração de informações coerentes, visualmente envolvente e interativa.
     
 ![](https://)
    
  
-- [x] 2.10 - Conexão Frontend/backend 
+- [x] 2.9 - Hospedagem 
     
-O frontend integrado a todo o backend, trocando dados entre si. 
+Aplicação roando em cloud, com integração do frontend com o backend. 
     
 ![](https://)  
-![](https://)
+![](https://) 
+    
+- [x] 2.10 - Manual do Usuário.
+    
+Arquivo .pdf com orientações aos Usuários, Suportes e Administradores de como fazer uso da aplicação.
+    
+![](https://)  
+ 
 
 → [Voltar ao topo](#topo) 
     
