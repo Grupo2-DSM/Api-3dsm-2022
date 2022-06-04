@@ -1,7 +1,7 @@
 <br id="topo">
 <h1 align = "center"> FATEC Profº Jessen Vidal, SJC - 3º Semestre DSM </h1>
 <p align = "center">
-<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Logo_nova-removebg-preview.png" width = "400px" height = "200px">
+<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Logo_Sprint2.png" width = "400px" height = "200px">
 
 
 <p align = "center"> GoodTicket é um Website Help Desk para suporte técnico acessível e fácil de usar para empresas.
