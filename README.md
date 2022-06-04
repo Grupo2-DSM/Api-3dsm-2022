@@ -118,18 +118,19 @@ Interface web de Serviço de Análise de Negócio alimentada pelos dados gerados
 ![](https://)
    
  
-- [x] 2.9 - Hospedagem 
+- [x] 2.9 - Manual do Usuário.
+    
+Arquivo .pdf com orientações aos Usuários, Suportes e Administradores de como fazer uso da aplicação.
+    
+![](https://) 
+    
+
+- [x] 3 - Hospedagem 
     
 Aplicação roando em cloud, com integração do frontend com o backend. 
     
 ![](https://)  
 ![](https://) 
-    
-- [x] 2.10 - Manual do Usuário.
-    
-Arquivo .pdf com orientações aos Usuários, Suportes e Administradores de como fazer uso da aplicação.
-    
-![](https://)  
  
 
 → [Voltar ao topo](#topo) 
