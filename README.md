@@ -91,7 +91,7 @@ Inicialmente foram apresentados alguns requisitos funcionais e não funcionais e
   
  ### Sprint 3
   
- <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Sprint3_.png">
+ <img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Backlog_Sprint3.png">
  
 → [Voltar ao topo](#topo)
   
