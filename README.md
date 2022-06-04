@@ -4,7 +4,6 @@
 <p align="center"> 
     <a href="#objetivos">Objetivos da Sprint</a> | 
     <a href="#mvp">MVP</a> | 
-    <a href="#prototipo">Protótipo</a> |
     <a href="#backlog">backlog</a> |
     <a href="#entregas">Entregas</a> |
     <a href="#Burndown">Burndown</a> |
@@ -57,33 +56,44 @@
 
 Funcionalidades em que: a autenticação é responsável por pegar as identidades dos usuários e verificá-las para fornecer o acesso ao sistema e a autorização é certificação que o usuário tem para acessar determinados recursos do sistema.
 
-![](https://)  
-![](https://) 
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_usuario-autenticar-rota.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_usuario-autenticar.png)
  
  
 - [x] 2.2 - Acompanhamento de chamado.
     
 Funcionalidade que permite o usuário e o suporte de visualizar e comentar o chamado, além de o suporte receber o chamado para tratar, acrescentar solução e fechar o chamado.
     
-![](https://)  
-![](https://) 
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_suporte-rota.png)
+    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_suporte.png)
+    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_comentario-rota.png)
+    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_suporte.png)
+    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_solucao-rota.png)
+    
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_suporte.png)
     
 
 - [x] 2.3 - Banco de Soluções.
     
 Funcionalidade que permite aos usuários e suportes a perquisa de soluções existente de chamados anteriores para evitar o retrabalho.
   
-![](https://)  
-![](https://) 
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_solucoes-rota.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_solucoes.png)
 
     
 - [x] 2.4 - Documentação do código.
     
 Funcionalidade elaborada em Swagger em que toda a documentação do código da aplicação e decifrado, permitido a manutenção e ampliação da Aplicação.
   
-![](https://)
-![](https://)
-
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_swagger1.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_swagger2.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_swagger3.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_swagger4.png)
+    
     
 ### Front-end   
 
@@ -99,8 +109,7 @@ Interface que permite o usuário e o suporte de visualizar e comentar o chamado,
    
 Interface que permite aos usuários e suportes a perquisa de soluções existente de chamados anteriores para evitar o retrabalho.
     
-![](https://)
-![](https://)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_Banco_solu%C3%A7%C3%B5es.png)
     
     
 - [x] 2.7 - Responsividade.
@@ -115,23 +124,22 @@ Interface que permite Usuário/Suporte/Administrador acessar a aplicação em di
    
 Interface web de Serviço de Análise de Negócio alimentada pelos dados gerados pela aplicação GoodTicket, relacionando-os e possibilitando a geração de informações coerentes, visualmente envolvente e interativa.
     
-![](https://)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_analise_dados.png)
    
  
 - [x] 2.9 - Manual do Usuário.
     
 Arquivo .pdf com orientações aos Usuários, Suportes e Administradores de como fazer uso da aplicação.
-    
-![](https://) 
-    
 
+[Manual do Usuário](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/Manual%20do%20Usu%C3%A1rio.pdf)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_Manual.png)
+    
+    
 - [x] 3 - Hospedagem 
     
 Aplicação roando em cloud, com integração do frontend com o backend. 
     
-![](https://)  
-![](https://) 
- 
+Aplicação [GoodTicket](https://goodticket.netlify.app/)
 
 → [Voltar ao topo](#topo) 
     
