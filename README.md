@@ -1,7 +1,7 @@
 <br id="topo">
 <h1 align = "center"> FATEC Profº Jessen Vidal, SJC - 3º Semestre DSM </h1>
 <p align = "center">
-<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Logo_Sprint2.png" width = "400px" height = "200px">
+<img src = "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/img/Logo_nova-removebg-preview.png" width = "400px" height = "200px">
 
 
 <p align = "center"> GoodTicket é um Website Help Desk para suporte técnico acessível e fácil de usar para empresas.
@@ -18,6 +18,7 @@
  | <a href="#BPMN">BPMN</a>
  | <a href="#Organização">Organização</a>
  | <a href="#Execução">Execução</a>
+ | <a href="#Manual">Manual do Usuário</a>
  | <a href="#Equipe">Equipe</a> |
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Grupo2-DSM/Api-3dsm-2022?style=for-the-badge)
@@ -167,6 +168,14 @@ Cada serviço foi desenvolvido em torno de um conjunto de regras de negócio esp
 ## Executando a Aplicação
   
 Para executar a siga os passos de [Como Executar](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/Como_Executar.md).
+ 
+ → [Voltar ao topo](#topo)
+  
+  <span id="Manual">
+
+## Manual do Usuário
+  
+Manual com as instruções de como Usar a Aplicação [Click para ver](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/Manual%20do%20Usu%C3%A1rio.pdf)
  
  → [Voltar ao topo](#topo)
  
