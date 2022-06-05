@@ -139,7 +139,7 @@ Arquivo .pdf com orientações aos Usuários, Suportes e Administradores de como
     
 Aplicação roando em cloud, com integração do frontend com o backend. 
     
-Aplicação [GoodTicket](https://goodticket.netlify.app/)
+Aplicação [GoodTicket](https://goodticket.vercel.app/)
 
 → [Voltar ao topo](#topo) 
     
