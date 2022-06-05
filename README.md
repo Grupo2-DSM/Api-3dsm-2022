@@ -1,4 +1,4 @@
-[![Generic badge](https://img.shields.io/badge/STATUS%20DA%20SPRINT-Em%20Andamento-yellow)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/STATUS%20DA%20SPRINT-Concluído-green)](https://shields.io/)
 <br id="topo">
 <h1 align="center"> Sprint 3: 16/05/2022 a 05/06/2022 </h1>
 <p align="center"> 
@@ -87,7 +87,7 @@ Funcionalidade que permite aos usuários e suportes a perquisa de soluções exi
     
 - [x] 2.4 - Documentação do código.
     
-Funcionalidade elaborada em Swagger em que toda a documentação do código da aplicação e decifrado, permitido a manutenção e ampliação da Aplicação.
+Funcionalidade elaborada em Swagger em que toda a documentação do código da aplicação e decifrado, permitido a manutenção e ampliação da Aplicação. [Veja aqui](https://app.swaggerhub.com/apis-docs/Nathtruyts/good-ticket/3.0.0)
   
 ![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_swagger1.png)
 ![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_swagger2.png)
@@ -116,8 +116,9 @@ Interface que permite aos usuários e suportes a perquisa de soluções existent
    
 Interface que permite Usuário/Suporte/Administrador acessar a aplicação em dispositivos mobile e tablets, além de desktops. 
     
-![](https://)
-![](https://)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_responsividade_mobile.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_responsividade_tab.png)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_responsividade_tab2.png)
     
     
 - [x] 2.8 - Relatório baseado na aplicação Power BI.
@@ -153,13 +154,13 @@ O Burndown é uma ferramenta visual do Scrum que permite verificar se o trabalho
     
 Divisão de tarefas com os respectivos responsáveis, com as datas de início e término.
     
-![](https:/)  
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_tarefas.png)
     
 ### Horas 
     
 Acompanhamento diário das horas trabalhadas, exceto os finais de semana.
     
-![](https://)  
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_horas.png)  
 
 ### Gráfico 
     
@@ -177,7 +178,7 @@ Essa linha apresenta o trabalho real, que no início, o trabalho restante as dua
     
 Segue o Burndown da Equipe na Sprint 2: 
 
-![](https://)  
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_burndown.png)
     
 → [Voltar ao topo](#topo)  
 
