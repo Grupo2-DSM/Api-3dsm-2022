@@ -1,0 +1,783 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Repositório destinado aos arquivos desenvolvidos do helpdesk GoodTicket, para a Aprendizagem por Projetos Integrados da FATEC Profº. Jessen Vidal de São José Dos Campos, no 3º semestre de Desenvolvimento de Software Multiplataforma.",
+    "version": "3.0.0",
+    "title": "GoodTicket",
+    "contact": {
+      "email": "pi.grupo3dsm@gmail.com"
+    },
+    "license": {
+      "name": "MIT license",
+      "url": "https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/LICENSE"
+    }
+  },
+  "host": "goodticket.vercel.app.com",
+  "tags": [
+    {
+      "name": "Chamados",
+      "description": "Operações relacionados aos chamados"
+    },
+    {
+      "name": "Usuário",
+      "description": "Operações relacionadas aos usuários"
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  
+  "paths": {
+    "/chamados": {
+      "get": {
+        "tags": [
+          "Chamados"
+        ],
+        "summary": "Busca todos os chamados registrados",
+        "description": "Ultiliza a requisição Get para mostrar todos os chamados existentes.",
+        "operationId": "getChamados",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "302": {
+            "description": "retorna chamados registrados",
+            "schema": {
+              "$ref": "#/definitions/Chamado"
+            }
+          }
+        }
+      }
+    },
+    "/chamados/fechados": {
+      "get": {
+        "tags": [
+          "Chamados"
+        ],
+        "summary": "Busca todos os chamados fechados",
+        "description": "Ultiliza a requisção Get para mostrar todos os chamados existentes.",
+        "operationId": "getFechados",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "retorna chamados registrados",
+            "schema": {
+              "$ref": "#/definitions/Chamado"
+            }
+          }
+        }
+      }
+    },
+    "/chamados/abertos": {
+      "get": {
+        "tags": [
+          "Chamados"
+        ],
+        "summary": "Busca todos os chamados abertos",
+        "description": "Ultiliza a requisção Get para mostrar todos os chamados abertos existentes.",
+        "operationId": "getAbertos",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "retorna chamados registrados",
+            "schema": {
+              "$ref": "#/definitions/Chamado"
+            }
+          }
+        }
+      }
+    },
+    "/chamados/em-andamento": {
+      "get": {
+        "tags": [
+          "Chamados"
+        ],
+        "summary": "Busca todos os chamados em andamento da aplicação",
+        "description": "Ultiliza a requisção Get para mostrar todos os chamados em andamento existentes.",
+        "operationId": "getAndamento",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "retorna chamados em andamento registrados",
+            "schema": {
+              "$ref": "#/definitions/Chamado"
+            }
+          }
+        }
+      }
+    },
+    "/chamados/abertos/em-andamento": {
+      "get": {
+        "tags": [
+          "Chamados"
+        ],
+        "summary": "Busca todos os chamados abertos e em adamento",
+        "description": "Ultiliza a requisção Get para mostrar todos os chamados abertos e em andamento existentes.",
+        "operationId": "getAndamentoAberto",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "retorna chamados abertos e em andamento registrados",
+            "schema": {
+              "$ref": "#/definitions/Chamado"
+            }
+          }
+        }
+      }
+    },
+    "/chamado/{ID}": {
+      "get": {
+        "tags": [
+          "Chamados"
+        ],
+        "summary": "Busca um determinado chamado pelo id",
+        "description": "Ultilizando a requisição Get, busca um chamado pelo seu id",
+        "operationId": "GetIDChamado",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "type": "string",
+            "name": "ID",
+            "description": "dados registrados do chamado",
+            "required": true
+          }
+        ],
+        "responses": {
+          "302": {
+            "description": "Retorna o chamado correspondente ao ID",
+            "schema": {
+              "$ref": "#/definitions/Chamado"
+            }
+          }
+        }
+      }
+    },
+    "/chamado/inserir": {
+      "post": {
+        "tags": [
+          "Chamados"
+        ],
+        "summary": "Envia um chamado ao banco de dados",
+        "description": "registra as informações do formulário no banco de dados",
+        "operationId": "registerchamados",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "infos do chamado",
+            "description": "Dados presentes no chamado",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ChamadoCadastro"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Chamado foi enviado com sucesso"
+          }
+        }
+      }
+    },
+    "/chamado/comentario": {
+      "put": {
+        "tags": [
+          "Chamados"
+        ],
+        "summary": "Envia um comentário no chamado",
+        "description": "registra um comentário do suporte ao chamado",
+        "operationId": "registercoment",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "comentário",
+            "description": "Dados do comentário",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ChamadoComentario"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Comentário enviado com sucesso"
+          }
+        }
+      }
+    },
+    "/chamado/solucao": {
+      "put": {
+        "tags": [
+          "Chamados"
+        ],
+        "summary": "Envia uma solucao ao chamado",
+        "description": "registra a solção do suporte ao chamado",
+        "operationId": "registersolution",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "solução",
+            "description": "Dados da solução",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ChamadoSolucao"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Comentário enviado com sucesso"
+          }
+        }
+      }
+    },
+    "/chamado/suporte": {
+      "put": {
+        "tags": [
+          "Chamados"
+        ],
+        "summary": "Registra um suporte para resolver o chamado",
+        "description": "Vincula um suporte a um chamado",
+        "operationId": "ChamadoSuporte",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Suporte",
+            "description": "dados do suporte para registro",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ChamadoSuporte"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "vincula um suporte ao chamado"
+          }
+        }
+      }
+    },
+    "/chamado/deletar": {
+      "delete": {
+        "tags": [
+          "Chamados"
+        ],
+        "summary": "Deleta um chamado",
+        "description": "Só pode ser feito pelo usuário que o criou.",
+        "operationId": "deletechamado",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ID do chamado",
+            "in": "body",
+            "description": "Id do chamado que será deletado",
+            "required": true,
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/ChamadoID"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Invalid username supplied"
+          },
+          "404": {
+            "description": "Chamado not found"
+          }
+        }
+      }
+    },
+    "/usuario/autenticar": {
+      "post": {
+        "tags": [
+          "Usuário"
+        ],
+        "summary": "Loga um usuário na plataforma",
+        "description": "Ultiliza as credenciais para se conectar a aplicação",
+        "operationId": "loginUser",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "email e senha",
+            "in": "body",
+            "description": "Credenciais ultilizadas para login",
+            "required": true,
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/UsuarioLogin"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Logado com sucesso"
+          },
+          "401": {
+            "description": "não autorizado"
+          }
+        }
+      }
+    },
+    "/usuario/cadastro": {
+      "post": {
+        "tags": [
+          "Usuário"
+        ],
+        "summary": "Cadastro de usuários na plataforma",
+        "description": "Só pode ser feito pelo administrador do sistema",
+        "operationId": "cadastroUsuario",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Dados necessários para cadastro",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UsuarioCadastrar"
+              }
+            }
+          },
+          {
+            "in": "header",
+            "name": "authotization",
+            "description": "prefixo do token jwt + token do jwt",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Usuário cadastrado com sucesso"
+          },
+          "403": {
+            "description": "não autorizado"
+          },
+          "409": {
+            "description": "email ja cadastrado"
+          }
+        }
+      }
+    },
+    "/usuarios": {
+      "get": {
+        "tags": [
+          "Usuário"
+        ],
+        "summary": "Mostra todos os usuários cadastrados no sistema",
+        "description": "Get geral de todos os usuários",
+        "operationId": "ViewUsuarios",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "autorização",
+            "in": "header",
+            "description": "autorização da role (adm)",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "successful",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Usuario"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/usuario/deletar": {
+      "delete": {
+        "tags": [
+          "Usuário"
+        ],
+        "summary": "Deleta um usuário",
+        "description": "Só pode ser feito pelo administrador",
+        "operationId": "deleteusuario",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "body",
+            "description": "email do usuário que será deletado",
+            "required": true,
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/UsuarioDelete"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operação completa"
+          },
+          "400": {
+            "description": "Email inválido"
+          },
+          "404": {
+            "description": "usuario não encontrado"
+          }
+        }
+      }
+    },
+    "/redefinirSenha": {
+      "put": {
+        "tags": [
+          "Usuário"
+        ],
+        "summary": "Altera a senha de um usuário",
+        "description": "Usuario pode redefinir sua própria senha",
+        "operationId": "RedfSenha",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Usuario"
+            }
+          },
+          "400": {
+            "description": "Invalid username supplied"
+          },
+          "404": {
+            "description": "User not found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Chamado": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "titulo": {
+          "type": "string",
+          "example": "o estabilizador está com defeito"
+        },
+        "descricao": {
+          "type": "string",
+          "example": "estabilizador não liga"
+        },
+        "tipo": {
+          "type": "string",
+          "example": "hardware"
+        },
+        "equipamento": {
+          "type": "string",
+          "example": "Estabilizador"
+        },
+        "descri_equipamento": {
+          "type": "string",
+          "example": "Estabilizador SNS 220v"
+        },
+        "num_maquina": {
+          "type": "string",
+          "example": 10
+        },
+        "local": {
+          "type": "string",
+          "example": "Sede da empresa"
+        },
+        "sala": {
+          "type": "string",
+          "example": 26
+        },
+        "datahora": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "resolucao": {
+          "type": "string",
+          "example": "Efetuar teste em outras tomadas, se o erro persistir trocar o equipamento"
+        },
+        "resolvido": {
+          "type": "string",
+          "description": "Status da resolução",
+          "enum": [
+            "sim",
+            "Nao"
+          ]
+        },
+        "dificuldade": {
+          "type": "string",
+          "example": "facil"
+        },
+        "prioridade": {
+          "type": "string",
+          "example": "baixa"
+        },
+        "relator": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "nome": {
+              "type": "string",
+              "example": "Isabelle"
+            },
+            "email": {
+              "type": "string",
+              "example": "isabelle.silva@fatec.sp.gov.br"
+            },
+            "departamento": {
+              "type": "string",
+              "example": "Engenharia"
+            },
+            "cargo": {
+              "type": "string",
+              "example": "Estagiária"
+            },
+            "comentarios": {
+              "type": "string"
+            },
+            "solucao": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "ChamadoSuporte": {
+      "type": "object",
+      "properties": {
+        "chamadoid": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "email": {
+          "type": "string",
+          "example": "suporte@gmail.com"
+        }
+      }
+    },
+    "ChamadoComentario": {
+      "type": "object",
+      "properties": {
+        "chamadoid": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "email": {
+          "type": "string",
+          "example": "suporte@gmail.com"
+        },
+        "body": {
+          "type": "string",
+          "example": "comentário"
+        }
+      }
+    },
+    "ChamadoSolucao": {
+      "type": "object",
+      "properties": {
+        "chamadoid": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "email": {
+          "type": "string",
+          "example": "suporte@gmail.com"
+        },
+        "body": {
+          "type": "string",
+          "example": "solução"
+        }
+      }
+    },
+    "ChamadoCadastro": {
+      "type": "object",
+      "properties": {
+        "titulo": {
+          "type": "string",
+          "example": "o estabilizador está com defeito"
+        },
+        "descricao": {
+          "type": "string",
+          "example": "estabilizador não liga"
+        },
+        "tipo": {
+          "type": "string",
+          "example": "hardware"
+        },
+        "equipamento": {
+          "type": "string",
+          "example": "Estabilizador"
+        },
+        "descri_equipamento": {
+          "type": "string",
+          "example": "Estabilizador SNS 220v"
+        },
+        "num_maquina": {
+          "type": "string",
+          "example": 10
+        },
+        "local": {
+          "type": "string",
+          "example": "Sede da empresa"
+        },
+        "sala": {
+          "type": "string",
+          "example": 26
+        },
+        "datahora": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "prioridade": {
+          "type": "string",
+          "example": "baixa"
+        }
+      }
+    },
+    "ChamadoID": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "example": "6254056c201cec400af6S1e6"
+        }
+      }
+    },
+    "Usuario": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "nome": {
+          "type": "string",
+          "example": "Nathan Truyts"
+        },
+        "setor": {
+          "type": "string",
+          "example": "Administrativo"
+        },
+        "cargo": {
+          "type": "string",
+          "example": "CEO"
+        },
+        "email": {
+          "type": "string",
+          "example": "Nathan@email.com"
+        }
+      }
+    },
+    "UsuarioCadastrar": {
+      "type": "object",
+      "properties": {
+        "nome": {
+          "type": "string"
+        },
+        "setor": {
+          "type": "string"
+        },
+        "cargo": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "senha": {
+          "type": "string"
+        }
+      }
+    },
+    "UsuarioLogin": {
+      "type": "object",
+      "properties": {
+        "senha": {
+          "type": "string",
+          "example": "senhasenha"
+        },
+        "email": {
+          "type": "string",
+          "example": "suporte@gmail.com"
+        }
+      }
+    },
+    "UsuarioDelete": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Veja mais sobre o GoodTicket",
+    "url": "https://github.com/Grupo2-DSM/Api-3dsm-2022"
+  }
+}
