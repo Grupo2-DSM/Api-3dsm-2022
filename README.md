@@ -161,6 +161,9 @@ Contém o Front-end desenvolvido em React e TypeScript com construção em pági
 Contém o Back-end , implementado com uma arquitetura de microsserviços que consiste em uma coleção de serviços pequenos e autônomos. 
 Cada serviço foi desenvolvido em torno de um conjunto de regras de negócio específico, e foi implementado de forma independente, o que possibilitará uma manutenção e evolução dos serviços de forma mais estáveis, permitindo uma maior flexibilidade de tecnologias, colocar alterações em produção.
  
+### 📁 <a href="https://github.com/Grupo2-DSM/Api-3dsm-2022/tree/main/swagger">/Swagger</a>:
+Documentação da API feita no Swagger, onde inclui todos os arquivos necessários para rodar a aplicação em local host. Servidor foi desenvolvido em Java, usando router e express, além da biblioteca swagger para java.  
+ 
  → [Voltar ao topo](#topo)
  
  <span id="Execução">
@@ -178,7 +181,13 @@ Para executar a siga os passos de [Como Executar](https://github.com/Grupo2-DSM/
 Manual com as instruções de como Usar a Aplicação [Click para ver](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/main/Manual%20do%20Usu%C3%A1rio.pdf)
  
  → [Voltar ao topo](#topo)
+   
+## Swagger
+   
+Documentação mock da api, com toda a documentação das rotas da aplicação, no site do Swaggerhub [Click para acessar](https://app.swaggerhub.com/apis-docs/Nathtruyts/good-ticket/3.0.0#/)   
  
+ → [Voltar ao topo](#topo)
+   
   <span id="Equipe">
 
 ## Equipe
