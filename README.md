@@ -87,7 +87,7 @@ Funcionalidade que permite aos usuários e suportes a perquisa de soluções exi
     
 - [x] 2.4 - Documentação do código.
     
-Funcionalidade elaborada em Swagger em que toda a documentação do código da aplicação e decifrado, permitido a manutenção e ampliação da Aplicação. [Veja aqui](https://app.swaggerhub.com/apis-docs/Nathtruyts/good-ticket/3.0.0)
+Funcionalidade elaborada em Swagger em que toda a documentação do código da aplicação e decifrado, permitido a manutenção e ampliação da Aplicação. [Veja aqui](https://github.com/Grupo2-DSM/Api-3dsm-2022/tree/main/swagger)
   
 ![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_swagger1.png)
 ![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_swagger2.png)
@@ -101,7 +101,7 @@ Funcionalidade elaborada em Swagger em que toda a documentação do código da a
     
 Interface que permite o usuário e o suporte de visualizar e comentar o chamado, além de o suporte receber o chamado para tratar, acrescentar solução e fechar o chamado.
     
-![](https://)
+![](https://github.com/Grupo2-DSM/Api-3dsm-2022/blob/Sprint-3/img/Sprint_3_acompanhamento.png)
 ![](https://)
 
     
