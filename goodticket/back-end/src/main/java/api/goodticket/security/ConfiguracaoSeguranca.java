@@ -33,8 +33,10 @@ public class ConfiguracaoSeguranca extends WebSecurityConfigurerAdapter{
 	@Autowired
 	private JWTGenerator JwtTokenGenerator;
 	
-	private static final String[] rotasPublicas = {"/chamados", "/redefinirSenha", "/chamado/atualizar", "/", "/chamados/fechados",
-			"/chamado/inserir", "/chamados/abertos", "/usuario/autenticar", "/chamado/solucao", "/chamado/comentario", "/usuario/cadastro", "/chamados/abertos-em-andamento"};
+	private static final String[] rotasPublicas = {"/usuario/autenticar", "/"};
+	private static final String[] rotasDeveloper = {"/", "/usuario/autenticar", "/usuarios", "/usuario/cadastro", "/redefinirSenha",
+			"/usuario/deletar", "/chamados", "/chamado/deletar",
+			"/chamado/solucao", "/chamado/comentario"};
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{

@@ -54,6 +54,7 @@ public class UsuarioControle {
 	@Autowired
 	private JWTGenerator jwtTokenGenerator;
 	
+	@PreAuthorize("hasAnyRole('ADMIN')")
 	@GetMapping("/usuario/{id}")
 	public ResponseEntity<UsuarioModelo> obterUsuario(@PathVariable String id){
 		List<Usuario> usuarios = repositorio.findAll();
@@ -96,8 +97,8 @@ public class UsuarioControle {
 		Usuario usuario = selecionador.selecionar(usuarios, usuarioDto.getEmail());
 		HttpStatus status = HttpStatus.CONFLICT;
 		if (usuario == null) {
-			if (usuarioDto.getEmail() != null && usuarioDto.getSenha() != null && usuarioDto.getUsuario().getNome() != null
-					&& usuarioDto.getUsuario().getSetor() != null && usuarioDto.getCargos() != null) {
+			if (usuarioDto.getEmail() != null && usuarioDto.getSenha() != null && usuarioDto.getNome() != null
+					&& usuarioDto.getSetor() != null && usuarioDto.getCargo() != null) {
 				Usuario user = usuarioDto.obter();
 				repositorio.save(user);
 				status = HttpStatus.CREATED;
@@ -108,6 +109,7 @@ public class UsuarioControle {
 		return new ResponseEntity<>(status);
 	}
 	
+	@PreAuthorize("hasAnyRole('ADMIN') or hasAnyRole('USER') or hasAnyRole('SUPPORT')")
 	@PutMapping("/redefinirSenha")
 	public ResponseEntity<?> redefinirSenha(@RequestBody NewPasswordModel atualizacao){
 		HttpStatus status = HttpStatus.CONFLICT;
@@ -127,15 +129,10 @@ public class UsuarioControle {
 	
 	@PreAuthorize("hasAnyRole('ADMIN')")
 	@DeleteMapping("/usuario/deletar")
-	public ResponseEntity<?> deletarUsuario(@RequestBody Usuario delecao) {
+	public ResponseEntity<?> deletarUsuario(@RequestBody UsuarioDTO delecao) {
 		HttpStatus status = HttpStatus.BAD_REQUEST;
 		List<Usuario> usuarios = repositorio.findAll();
-		Usuario selecionado = null;
-		for (Usuario usuario : usuarios) {
-			if (usuario.getCredencial().getEmail().equals(delecao.getCredencial().getEmail())) {
-				selecionado = usuario;
-			}
-		}
+		Usuario selecionado = selecionador.selecionar(usuarios, delecao.getEmail());
 		if (selecionado != null) {
 			repositorio.delete(selecionado);
 			status = HttpStatus.OK;

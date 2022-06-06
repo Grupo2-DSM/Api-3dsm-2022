@@ -1,5 +1,6 @@
 package api.goodticket.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -13,18 +14,27 @@ import lombok.Data;
 public class UsuarioDTO implements DataTransferObject<Usuario>{
 	private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 	
-	private Usuario usuario;
+	private String nome;
 	private String email;
 	private String senha;
-	private List<Cargo> cargos;
+	private String setor;
+	private Cargo cargo;
 	
 	@Override
 	public Usuario obter() {
+		Usuario usuario = new Usuario();
+		
 		Credencial credencial = new Credencial();
 		credencial.setEmail(email);
 		credencial.setSenha(encoder.encode(senha));
 		usuario.setCredencial(credencial);
+		
+		List<Cargo> cargos = new ArrayList<>();
+		cargos.add(cargo);
 		usuario.setCargos(cargos);
-		return this.usuario;
+		
+		usuario.setNome(nome);
+		usuario.setSetor(setor);
+		return usuario;
 	}
 }

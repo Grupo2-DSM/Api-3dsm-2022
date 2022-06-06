@@ -1,7 +1,5 @@
 package api.goodticket.models;
 
-import api.goodticket.entities.Usuario;
-
 public class UsuarioVerificadorNulo {
 	
 	public boolean verificar(UsuarioModelo usuarioModelo) {

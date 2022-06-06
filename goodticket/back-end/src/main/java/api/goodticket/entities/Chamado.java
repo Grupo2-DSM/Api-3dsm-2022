@@ -1,11 +1,11 @@
 package api.goodticket.entities;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Id;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import api.goodticket.models.UsuarioModelo;
 import lombok.Data;
 
 @Document("chamados")
@@ -39,9 +39,13 @@ public class Chamado {
 	
 	private String prioridade;
 	
-	private Usuario relator;
+	private UsuarioModelo relator;
+	
+	private UsuarioModelo suporte;
 	
 	private List<Comentario> comentarios;
 	
 	private Comentario solucao;
+	
+	private String datahorafechamento;
 }
