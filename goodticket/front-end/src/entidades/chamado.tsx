@@ -9,4 +9,6 @@ export default class Chamado{
     public num_maquina!: number
     public sala!: number
     public prioridade!: string
+
 }
+

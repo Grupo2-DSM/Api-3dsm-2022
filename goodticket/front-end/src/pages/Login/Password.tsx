@@ -9,21 +9,20 @@ export function Password() {
     return (
         <div id="page-auth">
             <aside>
-                <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas"/>
+                <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
                 <strong>Esqueceu a senha ? Redefina</strong>
                 <p>Envie um email de confirmação para poder redefinir</p>
             </aside>
             <main>
                 <div className="main-content">
-                <h2>Redefinição de senha</h2>
+                    <h2>Redefinição de senha</h2>
                     <form>
-                        <input 
+                        <span>Email:</span>
+                        <input
                             type="text"
-                            placeholder="Digite seu email"
+                            placeholder="Digite o email associado a sua conta"
                         />
-                        <Button type='submit'>
-                            Redefinir senha
-                        </Button>
+                        <Button type='submit'> Redefinir senha </Button>
                     </form>
                 </div>
             </main>

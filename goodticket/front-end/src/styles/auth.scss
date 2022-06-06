@@ -28,7 +28,7 @@
             font-size: 24px;
             line-height: 32px;
             margin-top: 16px;
-            color: #f8f8f8;            
+            color: #f8f8f8;
         }
     }
 
@@ -49,18 +49,18 @@
         max-width: 320px;
         align-items: stretch;
         text-align: center;
-    
-        > img {
+
+        >img {
             align-self: center;
             margin-bottom: 40px;
         }
-    
+
         h2 {
             font-size: 24px;
             margin: 64px 0 24px;
             font-family: 'Poppins', sans-serif;
         }
-    
+
         form {
             input {
                 height: 50px;
@@ -84,8 +84,9 @@
             button {
                 margin: 16px 0 16px 0;
             }
-    
-            button, input {
+
+            button,
+            input {
                 width: 100%;
             }
 
@@ -93,6 +94,40 @@
                 color: #29292e;
                 text-decoration: none;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #page-auth {
+        display: flex;
+        flex-direction: column-reverse;
+        background: #256BA8;
+
+        .main-content {
+            img {
+                max-width: 320px !important;
+                content: url('../assets/images/WhiteLogo.svg');
+            }
+
+            form {
+                a {
+                    color: #f8f8f8;
+                }
+
+                button {
+                    background-color: #f8f8f8;
+                    color: #29292e
+                }
+            }
+
+            span {
+                color: #f8f8f8;
+            }
+        }
+
+        aside {
+            display: none;
         }
     }
 }

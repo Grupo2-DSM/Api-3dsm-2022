@@ -1,135 +1,138 @@
-import { Component } from 'react';
+import { Component, useEffect, useState } from 'react';
 import CadastradorChamado from '../../cadastradores/cadastradorChamado';
 
 import { Button } from '../../components/Button';
-import { Navbar } from '../../components/Navbar';
+import { NavbarMenu } from '../../components/Navbar';
 
 import '../../styles/newTicket.scss';
 import '../../styles/global.scss';
+import ControleSessao from '../../login/ControleSessao';
+import { useNavigate } from 'react-router-dom';
+import Handlers from '../../login/Handlers';
 
-export class NewTicket extends Component{
-    private titulo!: string
-    private descricao!: string
-    private local!: string
-    private tipo!: string
-    private equipamento!: string
-    private descri_equipamento!: string
-    private num_maquina!: number
-    private sala!: number
-    private prioridade!: string
+export function NewTicket(){
 
-    constructor(props: any){
-        super(props)
-        this.capturarTitulo = this.capturarTitulo.bind(this)
-        this.capturarDescricao = this.capturarDescricao.bind(this)
-        this.capturarTipo = this.capturarTipo.bind(this)
-        this.capturarEquipamento = this.capturarEquipamento.bind(this)
-        this.capturarLocal = this.capturarLocal.bind(this)
-        this.capturarDescriEquipamento = this.capturarDescriEquipamento.bind(this)
-        this.capturarNumMaquina = this.capturarNumMaquina.bind(this)
-        this.capturarSala = this.capturarSala.bind(this)
-        this.capturarPrioridade = this.capturarPrioridade.bind(this)
-        this.submeterForm = this.submeterForm.bind(this)
-        this.cadastrarChamado = this.cadastrarChamado.bind(this)
-    }
+    const [autenticado, setAutenticado] = useState(true)
+    const navigate = useNavigate()
 
-    public cadastrarChamado(objeto:Object){
-        let cadastrador = new CadastradorChamado()
-        cadastrador.cadastrar(objeto)
-    }
+    const [titulo, setTitulo] = useState(String)
+    const [descricao, setDescricao] = useState(String)
+    const [local, setLocal] = useState(String)
+    const [tipo, setTipo] = useState(String)
+    const [equipamento, setEquipamento] = useState(String)
+    const [descri_equipamento, setDescri_equipamento] = useState(String)
+    const [num_maquina, setNum_maquina] = useState(Number)
+    const [sala, setSala] = useState(Number)
+    const [prioridade, setPrioridade] = useState(String)
+    const [email, setEmail] = useState(ControleSessao.getUserEmail())
 
-    public capturarTitulo(evento: any){
-        this.titulo = evento.target.value
-    }
+    useEffect(() => {
+        checarAutenticacao()
+    }, [])
 
-    public capturarDescricao(evento: any){
-        this.descricao = evento.target.value
-    }
-
-    public capturarLocal(evento: any){
-        this.local = evento.target.value
-    }
-
-    public capturarTipo(evento: any){
-        this.tipo = evento.target.value
-    }
-
-    public capturarEquipamento(evento: any){
-        this.equipamento = evento.target.value
-    }
-
-    public capturarDescriEquipamento(evento: any){
-        this.descri_equipamento = evento.target.value
-    }
-
-    public capturarNumMaquina(evento: any){
-        this.num_maquina = evento.target.value
-    }
-
-    public capturarSala(evento: any){
-        this.sala = evento.target.value
-    }
-
-    public capturarPrioridade(evento: any){
-        this.prioridade = evento.target.value
-    }
-
-    public submeterForm(evento: any){
-        evento.preventDefault()
-        let chamado ={
-            titulo: this.titulo,
-            descricao: this.descricao,
-            tipo: this.tipo,
-            equipamento: this.equipamento,
-            descri_equipamento: this.descri_equipamento,
-            num_maquina: this.num_maquina,
-            local: this.local,
-            sala: this.sala,
-            prioridade: this.prioridade
+    const checarAutenticacao = async () => {
+        const token = ControleSessao.getToken()
+        if (token == null) {
+            setAutenticado(false)
+        } else {
+            setAutenticado(true)
         }
-        this.cadastrarChamado(chamado)
-        evento.target.reset()
-        window.alert("Chamado criado com sucesso.")
-        window.location.href = '/page/home'
     }
 
-    render() {
-        return (
-            <div id="new-ticket-content">
-               <Navbar />
-                <main>
-                    <div id="main-ticket-content">
-                        <form onSubmit={(e) => this.submeterForm(e)}>
-                            <div className="form-group-textarea">
-                                <input onChange={this.capturarTitulo} id="titulo" type="text" placeholder="Título do chamado" />
-                                <textarea onChange={this.capturarDescricao} id="descricao" placeholder="Descrição do chamado" />
+    useEffect(() => {
+        if (!autenticado || ControleSessao.getUserCargo() != 'USER') {
+            navigate('/')
+        }
+    }, [autenticado, navigate])
+
+    let handlers = new Handlers()
+
+    let chamado = {
+        titulo: titulo,
+        descricao: descricao,
+        local: local,
+        tipo: tipo,
+        equipamento: equipamento,
+        descri_equipamento: descri_equipamento,
+        num_maquina: num_maquina,
+        sala: sala,
+        prioridade: prioridade,
+        email: email
+    }
+
+    const handlerNewTicket = (e: any) => {
+        e.preventDefault()
+
+        try {
+            handlers.handleNewTicket(chamado)
+        } catch(err) {
+            console.log(err)
+            window.alert('Ocorreu um erro!')
+        }
+    }
+
+    return (
+        <div id="new-ticket-content">
+           <NavbarMenu />
+            <main>
+                <div id="main-ticket-content">
+                    <form onSubmit={(e) => handlerNewTicket(e)}>
+                        <div className="form-group-textarea">
+                            <span>Título:</span>
+                            <input onChange={(e) => setTitulo(e.target.value)} id="titulo" type="text" placeholder="Insira o título do chamado" required/>
+                            <span>Descrição do problema:</span>
+                            <textarea onChange={(e) => setDescricao(e.target.value)} id="descricao" placeholder="Descreva o seu problema" required/>
+                        </div>
+                        <div className="form-input">
+                            <div className="form-collection"> 
+                                <span>Local:</span>
+                                <input onChange={(e) => setLocal(e.target.value)} id="local" type='text' placeholder="Insira o local:" className="mr" required/>
                             </div>
-                            <div className="form-input">
-                                <input onChange={this.capturarLocal} id="local" type='text' placeholder="Local" className="mr"/>
-                                <select onChange={this.capturarTipo} id="tipo">
+                            
+                            <div className="form-collection">
+                                <span>Hardware ou Software:</span>
+                                <select onChange={(e) => setTipo(e.target.value)} id="tipo" required>
                                     <option>Selecione</option>
                                     <option>Software</option>
                                     <option>Hardware</option>
                                 </select>
+                            </div>
+
+                            <div className="form-collection">
+                                <span>Sala:</span>
+                                <input onChange={(e) => setSala(parseInt(e.target.value))} id="sala" type="number" placeholder="Sala"  className="mr" required/>
+                            </div>
+
+                            <div className="form-collection">
+                                <span>Equipamento:</span>
+                                <input onChange={(e) => setEquipamento(e.target.value)} id="equipamento" type="text" placeholder="Equipamento" required/>
+                            </div>
                             
-                                <input onChange={this.capturarSala} id="sala" type="number" placeholder="Sala"  className="mr"/>
-                                <input onChange={this.capturarEquipamento} id="equipamento" type="text" placeholder="Equipamento" />
-                
-                                <input onChange={this.capturarNumMaquina} id="num_maquina" type="number" placeholder="ID do equipamento" className="mr"/>
-                                <input onChange={this.capturarDescriEquipamento} id="descri_equipamento" type="text" placeholder="Descrição do equipamento" />
+                            <div className="form-collection">
+                                <span>ID do equipamento: </span>
+                                <input onChange={(e) => setNum_maquina(parseInt(e.target.value))} id="num_maquina" type="number" placeholder="ID do equipamento" className="mr" required/>
                             </div>
-                            <div id="select-options">
-                                <select onChange={this.capturarPrioridade} id="prioridade">
-                                    <option selected>Prioridade</option>
-                                    <option>Alta</option>
-                                    <option>Baixa</option>
-                                </select>
-                            <Button type='submit' name='action'>Criar chamado</Button>
+
+                            <div className="form-collection">
+                                <span>Descrição do equipamento:</span>
+                                <input onChange={(e) => setDescri_equipamento(e.target.value)} id="descri_equipamento" type="text" placeholder="Descrição do equipamento" required/>
+                            </div>   
+                        </div>
+                        <div id="select-options">
+                            <div className="form-collection">
+                            <span>Prioridade:</span>
+                            <select onChange={(e) => setPrioridade(e.target.value)} id="prioridade" required>
+                                <option selected>Prioridade</option>
+                                <option>Alta</option>
+                                <option>Baixa</option>
+                            </select>
                             </div>
-                        </form>
-                    </div>
-                </main>
-            </div>
-        )
-    }
+                        <Button type='submit' name='action'>Criar chamado</Button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    )
+    
 }

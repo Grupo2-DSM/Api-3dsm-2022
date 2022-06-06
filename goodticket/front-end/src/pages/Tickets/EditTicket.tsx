@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { Button } from '../../components/Button';
-import { Navbar } from '../../components/Navbar';
+import { NavbarMenu } from '../../components/Navbar';
 
 import '../../styles/newTicket.scss';
 import '../../styles/global.scss';
@@ -51,7 +51,7 @@ export function EditTicket(objeto: Chamado) {
 
     return (
         <div>
-            <Navbar />
+            <NavbarMenu />
             <div id="new-ticket-content">
                 <main>
                     <div id="main-ticket-content">

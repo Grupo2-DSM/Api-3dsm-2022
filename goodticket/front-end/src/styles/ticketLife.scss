@@ -1,0 +1,98 @@
+#main-content {
+    margin: 2% 20%;
+    .content {
+        display: flex;
+        .information-content {
+            width: 100%;
+            .info-ticket-all {
+                display: flex;
+                
+                .info-ticket {
+                    margin: 0 16px 0 0;
+                }
+            }
+            
+            .info-input {
+                margin: 16px 0 16px 0;
+                span{
+                    margin-bottom: 5px;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+
+                .title-input {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 16px;
+
+                    input {
+                        width: 100%;
+                        height: 35px;
+                        border: 1px solid #29292e;
+                        border-radius: 4px;
+                        padding: 8px 16px 8px 16px;
+                        font-size: 16px;
+                        color: #29292e;
+                        outline: none;
+                        
+                        box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+                    }
+                }
+                .summary-input {
+                    display: flex;
+                    flex-direction: column;
+                    textarea {
+                        width: 100%;
+                        height: 76px;
+                        border: 1px solid #29292e;
+                        border-radius: 4px;
+                        padding: 8px 16px 8px 16px;
+                        font-size: 16px;
+                        color: #29292e;
+                        outline: none;
+
+                        
+                        box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+                    }
+                }
+            }
+
+            .info-badges {
+                display: flex;
+                margin: 16px 0 13px 0;
+
+                .badge-high {
+                    margin-right: 32px;
+                }
+            }
+        }
+    }
+
+    hr {
+        border: 1px solid #d9d9d9;
+        border-radius: 5px;
+    }
+}
+
+@media only screen and (max-width: 890px) {
+    #main-content {
+        margin: 2% 10%;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    #main-content {
+        margin: 2% 5%;
+
+        .info-ticket-all {
+            span {
+                font-size: 14px;
+            }
+
+            .row-wreck {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

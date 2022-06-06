@@ -1,112 +1,117 @@
-import { Component } from 'react';
+import { Component, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import illustrationImg from '../../assets/images/illustrationBusiness.png';
 import logoImg from '../../assets/images/Logo.svg';
 import CadastradorUsuario from '../../cadastradores/cadastradorUsuario';
 
 import { Button } from '../../components/Button';
+import ControleSessao from '../../login/ControleSessao';
+import Handlers from '../../login/Handlers';
 
 import '../../styles/auth.scss';
 import '../../styles/global.scss';
 
-export class UserRegister extends Component {
-    private nome!: string
-    private email!: string
-    private setor!: string
-    private cargo!: string
-    private senha!: string
+export function UserRegister(){
 
-    constructor(props: any){
-        super(props)
-        this.capturarNome = this.capturarNome.bind(this)
-        this.capturarEmail = this.capturarEmail.bind(this)
-        this.capturarSetor = this.capturarSetor.bind(this)
-        this.capturarCargo = this.capturarCargo.bind(this)
-        this.capturarSenha = this.capturarSenha.bind(this)
-        this.submeterForm = this.submeterForm.bind(this)
-        this.cadastrarUsuario = this.cadastrarUsuario.bind(this)
-    }
+    const [nome, setNome] = useState('')
+    const [email, setEmail] = useState('')
+    const [setor, setSetor] = useState('')
+    const [cargo, setCargo] = useState('')
+    const [senha, setSenha] = useState('')
 
-    public cadastrarUsuario(objeto:Object){
-        let cadastrador = new CadastradorUsuario()
-        cadastrador.cadastrar(objeto)
-    }
+    const [autenticado, setAutenticado] = useState(true)
+    const navigate = useNavigate()
 
-    public capturarNome(evento: any){
-        this.nome = evento.target.value
-    }
+    useEffect(() => {
+        checarAutenticacao()
+    }, [])
 
-    public capturarEmail(evento: any){
-        this.email = evento.target.value
-    }
-
-    public capturarSetor(evento: any){
-        this.setor = evento.target.value
-    }
-
-    public capturarCargo(evento: any){
-        this.cargo = evento.target.value
-    }
-
-    public capturarSenha(evento: any){
-        this.senha = evento.target.value
-    }
-
-    public submeterForm(evento: any){
-        evento.preventDefault()
-        let usuario ={
-            nome: this.nome,
-            email: this.email,
-            setor: this.setor,
-            cargo: this.cargo,
-            senha: this.senha
+    useEffect(() => {
+        if (!autenticado || ControleSessao.getUserCargo() != 'ADMIN'){
+            navigate('/')
         }
-        this.cadastrarUsuario(usuario)
-        evento.target.reset()
-        window.alert("Usuário cadastrado com sucesso")
-        window.location.href = '/page/home'
+    }, [autenticado, navigate])
+
+    const checarAutenticacao = async () => {
+        const token = ControleSessao.getToken()
+        if (token == null){
+            setAutenticado(false)
+        } else {
+            setAutenticado(true)
+        }
+        return autenticado
     }
 
-    render(){
-        return (
-            <div id="page-auth">
-                <aside>
-                    <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas"/>
-                    <strong>Cadastre usuários em nosso sistema</strong>
-                </aside>
-                <main>
-                    <div className="main-content">
-                    <img src={logoImg} alt="Letmeask" />
-                        <form onSubmit={(e) => this.submeterForm(e)} >
-                            <input onChange={this.capturarNome}
-                                type="text"
-                                placeholder="Nome"
-                            />
-                            <input onChange={this.capturarEmail}
-                                type="text"
-                                placeholder="Email"
-                            />
-                            <input onChange={this.capturarSenha} 
-                                type="password"
-                                placeholder="Senha"
-                            />
-                            <input onChange={this.capturarSetor}
-                                type="text"
-                                placeholder="setor"
-                            />
-                            <select onChange={this.capturarCargo} 
-                            className="select" name="select">
-                                <option value="Cargos">Cargos</option>
-                                <option value="Usuário">Usuário</option>
-                                <option value="Suporte">Suporte</option>
-                                <option value="Administrador">Administrador</option>
-                            </select>
-                            <Button type='submit' name='action'>
-                                Cadastrar
-                            </Button>
-                        </form>
-                    </div>  
-                </main>
-            </div>
-        );
+    let usuario = {
+        nome: nome,
+        email: email,
+        setor: setor,
+        cargo: cargo,
+        senha: senha
     }
-    }
+
+    let handlers = new Handlers()
+
+    const handleNewUser = async (e: any) => {
+        e.preventDefault()
+
+        try{
+            handlers.handleNewUser(usuario)
+            e.target.reset()
+        } catch(err){
+            console.log(err)
+            window.alert("Ocorreu um erro!")
+        }
+    } 
+    return (
+        <div id="page-auth">
+            <aside>
+                <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas"/>
+                <strong>Cadastre usuários em nosso sistema</strong>
+            </aside>
+            <main>
+                <div className="main-content">
+                <img src={logoImg} alt="Letmeask" />
+                    <form onSubmit={(e) => handleNewUser(e)} > 
+                        <span>Nome:</span>
+                        <input onChange={(e) => setNome(e.target.value)}
+                            type="text"
+                            placeholder="Nome"
+                            required
+                        />
+                        <span>Email:</span>
+                        <input onChange={(e) => setEmail(e.target.value)}
+                            type="text"
+                            placeholder="Email"
+                            required
+                        />
+                        <span>Senha:</span>
+                        <input onChange={(e) => setSenha(e.target.value)} 
+                            type="password"
+                            placeholder="Senha"
+                            required
+                        />
+                        <span>Setor:</span>
+                        <input onChange={(e) => setSetor(e.target.value)}
+                            type="text"
+                            placeholder="Setor"
+                            required
+                        />
+                        <span>Cargo:</span>
+                        <select onChange={(e) => setCargo(e.target.value)} 
+                        className="select" name="select" required>
+                            <option value="Cargos">Cargos</option>
+                            <option value="ROLE_USER">Usuário</option>
+                            <option value="ROLE_SUPPORT">Suporte</option>
+                            <option value="ROLE_ADMIN">Administrador</option>
+                        </select>
+                        <Button type='submit' name='action'>
+                            Cadastrar
+                        </Button>
+                    </form>
+                </div>  
+            </main>
+        </div>
+    );
+}
+

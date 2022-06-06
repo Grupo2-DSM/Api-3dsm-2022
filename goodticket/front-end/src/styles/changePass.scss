@@ -1,0 +1,34 @@
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    
+
+    form{
+        .principal{
+            input{
+                width: 448px;
+                padding: 16px;
+                margin-bottom: 16px;
+                border: none;
+                border-radius: 8px;
+                background: #fefefe;
+                box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
+                color: #29292E;
+                display: block;
+            }
+        }
+
+        .botao{
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+    }
+    
+}
+
+

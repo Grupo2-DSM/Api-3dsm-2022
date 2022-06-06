@@ -1,20 +1,21 @@
-import { useEffect, useMemo, useState } from "react";
+import { SetStateAction, useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Navbar } from "../../components/Navbar";
-import { Button } from '../../components/Button';
+import { NavbarMenu } from "../../components/Navbar";
+import { TableTicket } from "../../components/TableTicket";
 
 import '../../styles/viewTickets.scss';
-import '../../styles/customStyleModal/viewTicketModal.scss'
-import '../../styles/customStyleModal/globalAnimationModal.scss'
 import '../../styles/global.scss';
 
-import "react-responsive-modal/styles.css";
+
 import axiosLogin from "../../login/axiosLogin";
 import { URI } from "../../enum/uri";
-import Modal from "react-responsive-modal";
+import ControleSessao from "../../login/ControleSessao";
+import { Button, FormControl, InputGroup } from "react-bootstrap";
+import { FaSearch } from "react-icons/fa";
 
-export function ViewTickets(){
+
+export function ViewTickets({ list = [] }) {
     const [open, setOpen] = useState(false);
     const onOpenModal = () => setOpen(true);
     const onCloseModal = () => setOpen(false);
@@ -24,98 +25,93 @@ export function ViewTickets(){
     const [descricao, setDescricao] = useState('')
     const [prioridade, setPrioridade] = useState('')
     const [id, setId] = useState('')
+    const [autenticado, setAutenticado] = useState(true)
+    const [tickets, setTickets] = useState([])
 
-        const handleGetAll = async () =>{
-            const resposta =  await axiosLogin.get(URI.CHAMADOS)
-            return resposta.data
+    // AUTENTICAÇÃO DA PÁGINA
+    useEffect(() => {
+        checarAutenticacao()
+    }, [])
+
+    const checarAutenticacao = async () => {
+        const token = ControleSessao.getToken()
+        if (token == null) {
+            setAutenticado(false)
+        } else {
+            setAutenticado(true)
         }
-
-        useEffect(() => {
-            const getAllTickets = async () => {
-                const allTickets = await handleGetAll()
-                if (allTickets) setChamados(allTickets)    
-            }
-            getAllTickets()
-        }, [])
-
-        const [busca, setBusca] = useState('');
-
-        const chamadosFiltrados = useMemo(() => {
-            const lowerBusca = busca.toLowerCase();
-            return chamados.filter((chamado: any) =>
-                chamado['titulo'].toLowerCase().includes(lowerBusca)
-            );
-        }, [busca, chamados]);
-
-        
-        return (
-            <div>
-               <Navbar />
-                <Modal
-                    open={open}
-                    onClose={onCloseModal}
-                    center
-                    classNames={{
-                    overlay: "customOverlay",
-                    modal: "customModal",
-                    overlayAnimationIn: 'customEnterOverlayAnimation',
-                    overlayAnimationOut: 'customLeaveOverlayAnimation',
-                    modalAnimationIn: 'customEnterModalAnimation',
-                    modalAnimationOut: 'customLeaveModalAnimation',
-                }}>
-                    <div id="modal-content">
-                        <div className="id-ticket">
-                            <p>{id}</p>
-                        </div>
-
-                        <input type="text" placeholder={titulo} disabled />
-                        <textarea name="" id="" placeholder={descricao} disabled />
-                        <select name="" id="" disabled>
-                            <option value="">{prioridade}</option>
-                            <option value="">Baixa</option>
-                        </select>
-
-                        <div className="margin-left">
-                            <Button onClick={() => navigate('/page/edit/ticket')}>Editar</Button>
-                        </div>
-                    </div>
-                </Modal>
-                <div id="view-ticket-content">
-                    <main>
-                        <div className="main-search-area">
-                            <input type="text" 
-                            placeholder="Procure pelo nome do chamado"
-                            value={busca}
-                            onChange={(ev) => setBusca(ev.target.value)} 
-                            />
-                            <select>
-                                <option selected>Selecione um filtro</option>
-                                <option>Em andamento</option>
-                                <option>Finalizado</option>
-                            </select>
-                        </div>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th><span>Id</span></th>
-                                    <th><span>Titulo</span></th>
-                                    <th><span>Equipamento</span></th>
-                                    <th><span>Status</span></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {chamadosFiltrados.map((chamado: any) => (
-                                    <tr key={chamado['id']} onClick={onOpenModal} onClickCapture={() => {setId(chamado['id']); setTitulo(chamado['titulo']); setDescricao(chamado['descricao']); setPrioridade(chamado['prioridade'])}}>
-                                        <td><span>{chamado['id']}</span></td>
-                                        <td><span>{chamado['titulo']}</span></td>
-                                        <td><span>{chamado['equipamento']}</span></td>
-                                        <td><span>{chamado['status']}</span></td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </main>
-                </div>
-            </div>
-        );
+        return autenticado
     }
+
+    useEffect(() => {
+        ControleSessao.removeChamado()
+        if (!autenticado) {
+            navigate('/')
+        }
+    }, [autenticado, navigate])
+
+
+
+    const handleGetAll = async () => {
+        const resposta = await axiosLogin.get(URI.CHAMADOS_ABERTOS_EM_ANDAMENTO, {
+            headers: {
+                'Authorization': `Bearer ${ControleSessao.getToken()}`
+            }
+        })
+        return resposta.data
+    }
+
+    const getAllTickets = async () => {
+        const allTickets: [] = await handleGetAll()
+        if (ControleSessao.getUserCargo() == 'USER') {
+            allTickets.forEach(chamado => {
+                if (chamado['relator']['email'] == ControleSessao.getUserEmail()) {
+                    tickets.push(chamado)
+                }
+            })
+            setChamados(tickets)
+        } else {
+            setChamados(allTickets)
+        }
+    }
+    useEffect(() => {
+        getAllTickets()
+    }, []);
+
+
+    // PESQUISAR POR TITULO DO CHAMADO 
+    const [busca, setBusca] = useState('');
+
+    const chamadosFiltrados = useMemo(() => {
+        const lowerBusca = busca.toLowerCase();
+        return chamados.filter((chamado: any) =>
+            chamado['titulo'].toLowerCase().includes(lowerBusca)
+        );
+    }, [busca, chamados]);
+
+
+    // ORDENAR CHAMADOS POR TITULO
+    const [order, setOrder] = useState(1)
+    const [colunmOrder, setColunmOrder] = useState('title')
+
+
+    const handleOrder = (fieldName: SetStateAction<string>) => {
+        setOrder(-order)
+        setColunmOrder(fieldName)
+    }
+
+    chamadosFiltrados.sort((a, b) => {
+        return a[colunmOrder] < b[colunmOrder] ? -order : order;
+    })
+
+
+    // RENDERIZAÇÃO DA PÁGINA
+    return (
+        <div>
+            <NavbarMenu />
+            <main>
+                <TableTicket />
+            </main>
+        </div>
+    );
+}

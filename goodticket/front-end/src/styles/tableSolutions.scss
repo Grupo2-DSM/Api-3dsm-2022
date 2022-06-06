@@ -1,0 +1,26 @@
+#table-content-solution {
+    margin: 0 auto;
+    max-width: 80%;
+    .main-search-area {
+        input {
+            border: 1px solid #29292e;
+        }
+    }
+    table {
+        max-height: 350px;
+        
+        th {
+            cursor: pointer; 
+        }
+
+        td {
+            cursor: pointer; 
+        }
+    }
+   
+}
+
+hr {
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+}

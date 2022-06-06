@@ -1,0 +1,32 @@
+#table-content {
+    margin: 0 auto;
+    max-width: 80%;
+    
+    table {
+
+        tbody{
+            tr{
+                td{  
+                    span{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        max-height: 350px;
+        
+        th {
+            cursor: pointer; 
+        }
+
+        td {
+            cursor: pointer; 
+        }
+    }
+   
+}
+
+hr {
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+}

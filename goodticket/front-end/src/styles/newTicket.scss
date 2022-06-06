@@ -23,7 +23,7 @@
                 input {
                     width: 100%;
                     margin-bottom: 16px;
-                    border: 0;
+                    border: 1px solid #29292e;
                     padding: 16px;
                     border-radius: 8px;
                     background: #fefefe;
@@ -33,7 +33,7 @@
     
                 textarea {
                     width: 100%;
-                    border: 0;
+                    border: 1px solid #29292e;
                     padding: 16px;
                     border-radius: 8px;
                     background: #fefefe;
@@ -49,25 +49,51 @@
                 align-items: center;
                 flex-wrap: wrap;
 
-                select {
+                
+                input {
                     width: 384px;
                     margin-top: 16px;
-                    border: 0;
+                    border: 1px solid #29292e;
                     padding: 16px;
                     border-radius: 8px;
                     background: #fefefe;
                     box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
                     color: #29292E;
                 }
-                input {
+
+                select {
                     width: 384px;
                     margin-top: 16px;
-                    border: 0;
+                    border: 1px solid #29292e;
                     padding: 16px;
                     border-radius: 8px;
                     background: #fefefe;
                     box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
                     color: #29292E;
+                }
+                .form-collection{
+                    width: 384px;
+                    margin-top: 16px;
+
+                    select {
+                        width: 100%;
+                        border: 1px solid #29292e;
+                        padding: 16px;
+                        border-radius: 8px;
+                        background: #fefefe;
+                        box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
+                        color: #29292E;
+                    }
+
+                    input {
+                        width: 100%;
+                        border: 1px solid #29292e;
+                        padding: 16px;
+                        border-radius: 8px;
+                        background: #fefefe;
+                        box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
+                        color: #29292E;
+                    }
                 }
             }
 
@@ -76,8 +102,79 @@
                 justify-content: space-between;
                 align-items: center;
                 margin-top: 16px;
-                select {
+
+                .form-collection{
                     width: 384px;
+                    select {
+                        width: 100%;
+                        border: 1px solid #29292e;
+                        padding: 16px;
+                        border-radius: 8px;
+                        background: #fefefe;
+                        box-shadow: 0 2px 12px rgba(0,0,0, 0.04);
+                        color: #29292E;
+                        font-size: 16px;
+                    }
+                }
+                button {
+                    margin-top: 16px;
+                    width: 384px;
+                }
+            }
+
+        }
+    }
+}     
+
+@media only screen and (max-width: 850px) {
+    main {
+        #main-ticket-content {
+            form {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+
+                .form-group-textarea {
+                    max-width: 80%;
+                }
+
+                .form-input {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 80%;
+
+                    .form-collection {
+                        width: 100%;
+
+                        input {
+                            width: 80%;
+                        }
+                    }
+                }
+
+                .form-collection-3 {
+                    width: 80%;
+
+                    .form-input-box-3 {
+                        select {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            #select-options {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+                select {
+                    width: 80%;
                     border: 0;
                     padding: 16px;
                     border-radius: 8px;
@@ -88,11 +185,10 @@
                 }
 
                 button {
-                    margin-bottom: 0;
-                    width: 384px;
+                    margin-top: 20px;
+                    width: 80%;
                 }
             }
-
         }
     }
 }
